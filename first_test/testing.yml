@@ -1,0 +1,52 @@
+version: 0.0
+nameTest: TestAwingu
+browser: chome
+web: "https://sso.vngcloud.vn/cas"
+resizeWindow:
+  name: thangta
+  width: 500
+  height: 300
+hooks:
+  pageLogin:
+    - webDriver: Title # lấy tiêu đề
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: "input[qa-id='username-in']"
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'Chữ cần gửi'
+        - action: Click #click vào element
+        - action: Text #lấy text từ element
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      timeout: 10s
+    - webDriver: FindElement
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: "//a[contains(text(),'Word')]"
+      actions:
+        - action: Click
+    - webDriver: Screenshot # chụp màng hình
+
+  pageLogin:
+    - webDriver: Title # lấy tiêu đề
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: "input[qa-id='username-in']"
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'Chữ cần gửi'
+        - action: Click #click vào element
+        - action: Text #lấy text từ element
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      timeout: 10s
+    - webDriver: FindElement
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: "//a[contains(text(),'Word')]"
+      actions:
+        - action: Click
+    - webDriver: Screenshot # chụp màng hình
