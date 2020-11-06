@@ -29,7 +29,7 @@ hooks:
         - action: Click
     - webDriver: Screenshot # chụp màng hình
 
-  pageLogin:
+  pageVM:
     - webDriver: Title # lấy tiêu đề
     - webDriver: FindElement
       webElement:
