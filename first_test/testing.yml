@@ -12,29 +12,7 @@ hooks:
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
-        value: "input[qa-id='username-in']"
-        ignored: True
-      actions:
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'Chữ cần gửi'
-        - action: Click #click vào element
-        - action: Text #lấy text từ element
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      timeout: 10s
-    - webDriver: FindElement
-      webElement:
-        by: ByXPATH #tìm kí tự mong muốn
-        value: "//a[contains(text(),'Word')]"
-      actions:
-        - action: Click
-    - webDriver: Screenshot # chụp màng hình
-
-  pageVM:
-    - webDriver: Title # lấy tiêu đề
-    - webDriver: FindElement
-      webElement:
-        by: ByCSSSelector
-        value: "input[qa-id='username-in']"
+        value: "#username"
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
