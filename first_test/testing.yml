@@ -44,6 +44,8 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SwitchWindow
+      tab: 1
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       timeout: 10
     - webDriver: FindElement
