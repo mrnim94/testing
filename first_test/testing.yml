@@ -16,15 +16,21 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'Chữ cần gửi'
-        - action: Click #click vào element
-        - action: Text #lấy text từ element
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      timeout: 10s
+          value : 'demoiaas@vng.com.vn'
     - webDriver: FindElement
       webElement:
-        by: ByXPATH #tìm kí tự mong muốn
-        value: "//a[contains(text(),'Word')]"
+        by: ByCSSSelector
+        value: "#password"
+        ignored: True
       actions:
-        - action: Click
-    - webDriver: Screenshot # chụp màng hình
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'LWeVAZMf$e4u36p'
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: "[value="Login"]"
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      timeout: 10s
