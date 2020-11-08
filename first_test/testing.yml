@@ -33,4 +33,4 @@ hooks:
       actions:
         - action: Click #click vào element
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      timeout: 10s
+      timeout: 10
