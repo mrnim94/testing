@@ -50,8 +50,8 @@ hooks:
       timeout: 10
     - webDriver: FindElement
       webElement:
-        by: ByCSSSelector
-        value: '#cssmenu > ul > li.ops-group-item.active > a'
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//a[contains(text(),"Servers")]'
         ignored: True
       actions:
         - action: Click
