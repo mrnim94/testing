@@ -51,7 +51,7 @@ hooks:
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
-        value: 'a[href="/servers/list.html"]'
+        value: '#cssmenu > ul > li.ops-group-item.active > a'
         ignored: True
       actions:
         - action: Click
