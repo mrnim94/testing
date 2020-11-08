@@ -12,7 +12,7 @@ hooks:
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
-        value: "#username"
+        value: '#username'
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
@@ -20,7 +20,7 @@ hooks:
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
-        value: "#password"
+        value: '#password'
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
@@ -28,7 +28,7 @@ hooks:
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
-        value: "[value="Login"]"
+        value: '[value="Login"]'
         ignored: True
       actions:
         - action: Click #click vào element
