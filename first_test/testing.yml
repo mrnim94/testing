@@ -44,6 +44,8 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      timeout: 60
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
