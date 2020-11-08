@@ -44,3 +44,10 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: 'a[href="/servers/list.html"]'
+        ignored: True
+      actions:
+        - action: Click
