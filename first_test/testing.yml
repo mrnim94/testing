@@ -1,7 +1,7 @@
 version: 0.0
 nameTest: TestAwingu
 browser: chome
-web: "https://sso.vngcloud.vn/cas"
+web: "https://sso.vngcloud.vn/cas/login?service=https://my.vngcloud.vn/sso%3Fr%3Dhttp%3A%2F%2Fmy.vngcloud.vn%2F%3Fhl%3Den"
 resizeWindow:
   name: thangta
   width: 500
@@ -16,7 +16,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'demoiaas@vng.com.vn'
+          value : 'usernameInDB'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
@@ -24,7 +24,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'LWeVAZMf$e4u36p'
+          value : 'passwordInDB'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
