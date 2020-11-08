@@ -44,6 +44,13 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: '[alt="Image of vServer"]'
+        ignored: True
+      actions:
+        - action: Click
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       timeout: 60
     - webDriver: FindElement
