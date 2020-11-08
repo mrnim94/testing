@@ -55,3 +55,4 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: Screenshot # chụp màng hình
