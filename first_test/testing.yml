@@ -55,3 +55,4 @@ hooks:
         ignored: True
       actions:
         - action: Click
+        - action: Text #lấy text từ element
