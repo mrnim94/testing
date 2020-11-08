@@ -16,7 +16,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'usernameInDB'
+          value : 'demoiaas@vng.com.vn'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
@@ -24,7 +24,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'passwordInDB'
+          value : 'LWeVAZMf$e4u36p'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
@@ -33,4 +33,14 @@ hooks:
       actions:
         - action: Click #click vào element
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      timeout: 10
+      timeout: 10s
+
+  pageMain:
+    - webDriver: Title # lấy tiêu đề
+    - webDriver: FindElement
+      webElement:
+        by: ByCSSSelector
+        value: '[alt="Image of vServer"]'
+        ignored: True
+      actions:
+        - action: Click
