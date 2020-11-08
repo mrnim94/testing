@@ -16,7 +16,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : ''
+          value : 'usernameInDB'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
@@ -24,7 +24,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : ''
+          value : 'passwordInDB'
     - webDriver: FindElement
       webElement:
         by: ByCSSSelector
