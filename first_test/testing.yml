@@ -1,4 +1,7 @@
-web: "http://61.28.239.221/vi/"
+version: 0.0
+nameTest: LoadTestForVTI
+browser: chome
+web: "https://sso.vngcloud.vn/cas/login?service=https://my.vngcloud.vn/sso%3Fr%3Dhttp%3A%2F%2Fmy.vngcloud.vn%2F%3Fhl%3Den"
 resizeWindow:
   name: thangta
   width: 500
