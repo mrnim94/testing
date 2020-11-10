@@ -1,0 +1,41 @@
+version: 0.0
+nameTest: LoadTestForVTI
+browser: chome
+web: "https://sso.vngcloud.vn/cas/login?service=https://my.vngcloud.vn/sso%3Fr%3Dhttp%3A%2F%2Fmy.vngcloud.vn%2F%3Fhl%3Den"
+resizeWindow:
+  name: thangta
+  width: 500
+  height: 300
+hooks:
+  pageLogin:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: FindElement
+      description: 'Điền tên đăng nhập'
+      webElement:
+        by: ByCSSSelector
+        value: '#login'
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'usernameInDB'
+    - webDriver: FindElement
+      description: 'Điền Password'
+      webElement:
+        by: ByCSSSelector
+        value: '#password'
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'passwordInDB'
+    - webDriver: FindElement
+      description: 'Ấn Đăng nhập'
+      webElement:
+        by: ByXPATH
+        value: '//button[contains(text(),"Đăng nhập")]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện chờ síu'
+      timeout: 10
