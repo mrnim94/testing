@@ -1,7 +1,4 @@
-version: 0.0
-nameTest: TestAwingu
-browser: chome
-web: "https://sso.vngcloud.vn/cas/login?service=https://my.vngcloud.vn/sso%3Fr%3Dhttp%3A%2F%2Fmy.vngcloud.vn%2F%3Fhl%3Den"
+web: "http://61.28.239.221/vi/"
 resizeWindow:
   name: thangta
   width: 500
@@ -9,7 +6,9 @@ resizeWindow:
 hooks:
   pageLogin:
     - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
     - webDriver: FindElement
+      description: 'Tìm và Điền User'
       webElement:
         by: ByCSSSelector
         value: '#username'
@@ -18,6 +17,7 @@ hooks:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'usernameInDB'
     - webDriver: FindElement
+      description: 'Tìm và Điền Password'
       webElement:
         by: ByCSSSelector
         value: '#password'
@@ -26,6 +26,7 @@ hooks:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'passwordInDB'
     - webDriver: FindElement
+      description: 'Ấn Đăng nhập'
       webElement:
         by: ByCSSSelector
         value: '[value="Login"]'
@@ -34,25 +35,3 @@ hooks:
         - action: Click #click vào element
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       timeout: 10
-
-  pageMain:
-    - webDriver: Title # lấy tiêu đề
-    - webDriver: FindElement
-      webElement:
-        by: ByCSSSelector
-        value: '[alt="Image of vServer"]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: SwitchWindow
-      tab: 1
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      timeout: 10
-    - webDriver: FindElement
-      webElement:
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//a[contains(text(),"Servers")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: Screenshot # chụp màng hình
