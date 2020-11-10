@@ -46,8 +46,8 @@ hooks:
     - webDriver: FindElement
       description: 'Ấn Point of Sale'
       webElement:
-        by: ByCSSSelector
-        value: '.point_of_sale'
+        by: ByXPATH
+        value: '//div[contains(text(),"Point of Sale")]'
         ignored: True
       actions:
         - action: Click #click vào element
