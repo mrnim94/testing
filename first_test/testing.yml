@@ -58,8 +58,8 @@ hooks:
       description: 'Thực hiện chờ síu'
       timeout: 10
     - webDriver: FindElement
-      webElement:
-      description: 'Tìm đến tab Servers'  
+      description: 'Tìm đến tab Servers' 
+      webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//a[contains(text(),"Servers")]'
         ignored: True
