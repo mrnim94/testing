@@ -42,6 +42,7 @@ hooks:
 
   pageLogin:
     - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
     - webDriver: FindElement
       description: 'Ấn Point of Sale'
       webElement:
