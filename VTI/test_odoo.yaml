@@ -40,7 +40,7 @@ hooks:
       description: 'Thực hiện chờ síu'
       timeout: 10
 
-  pageLogin:
+  pageMain:
     - webDriver: Title # lấy tiêu đề
       description: 'Lấy Tilte của Pages'
     - webDriver: FindElement
