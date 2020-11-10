@@ -39,3 +39,14 @@ hooks:
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
       timeout: 10
+
+  pageLogin:
+    - webDriver: Title # lấy tiêu đề
+    - webDriver: FindElement
+      description: 'Ấn Point of Sale'
+      webElement:
+        by: ByCSSSelector
+        value: '.point_of_sale'
+        ignored: True
+      actions:
+        - action: Click #click vào element
