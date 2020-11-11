@@ -88,3 +88,11 @@ hooks:
         ignored: True
       actions:
         - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon Bún chả giò'
+      webElement:
+        by: ByCSSSelector
+        value: '.button.pay'
+        ignored: True
+      actions:
+        - action: Click #click vào element
