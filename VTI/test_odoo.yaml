@@ -62,7 +62,7 @@ hooks:
     - webDriver: Title # lấy tiêu đề
       description: 'Lấy Tilte của Pages'
     - webDriver: SleepAction #set timeout bắt element
-      description: 'Ngu Tý'
+      description: 'Ng Tý'
       timeout: 30
     - webDriver: FindElement
       description: 'Chon T1'
@@ -89,10 +89,38 @@ hooks:
       actions:
         - action: Click #click vào element
     - webDriver: FindElement
-      description: 'Chon Bún chả giò'
+      description: 'Chon chả tiền'
       webElement:
         by: ByCSSSelector
         value: '.button.pay'
         ignored: True
       actions:
+        - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon cash Payment'
+      webElement:
+        by: ByCSSSelector
+        value: '[data_id="35"]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon cash Payment'
+      webElement:
+        by: ByCSSSelector
+        value: '[data_id="35"]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon cash Payment'
+      webElement:
+        by: ByCSSSelector
+        value: '[data_action="9"]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+        - action: Click #click vào element
+        - action: Click #click vào element
+        - action: Click #click vào element
         - action: Click #click vào element
