@@ -38,7 +38,7 @@ hooks:
         - action: Click #click vào element
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
-      timeout: 10
+      timeout: 60
 
   pageMain:
     - webDriver: Title # lấy tiêu đề
