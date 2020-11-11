@@ -61,7 +61,7 @@ hooks:
         - action: Click #click vào element
     - webDriver: Title # lấy tiêu đề
       description: 'Lấy Tilte của Pages'
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+    - webDriver: SetPageLoadTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
       timeout: 60
     - webDriver: FindElement
