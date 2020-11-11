@@ -59,3 +59,16 @@ hooks:
         ignored: True
       actions:
         - action: Click #click vào element
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện chờ síu'
+      timeout: 60
+    - webDriver: FindElement
+      description: 'Chon T1'
+      webElement:
+        by: ByXPATH
+        value: '//span[contains(text(),"T1")]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
