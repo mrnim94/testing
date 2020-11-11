@@ -113,7 +113,7 @@ hooks:
       actions:
         - action: Click #click vào element
     - webDriver: FindElement
-      description: 'Chon cash Payment'
+      description: 'chọn tiền 99999'
       webElement:
         by: ByCSSSelector
         value: '[data_action="9"]'
