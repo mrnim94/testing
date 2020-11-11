@@ -51,3 +51,11 @@ hooks:
         ignored: True
       actions:
         - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Click nut Resume'
+      webElement:
+        by: ByCSSSelector
+        value: '[data-name="open_ui"]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
