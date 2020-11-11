@@ -125,3 +125,4 @@ hooks:
       actions:
         - action: Click #click vào element
     - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp Ảnh Receipt'
