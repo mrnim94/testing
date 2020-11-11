@@ -116,3 +116,11 @@ hooks:
         - action: Click #click vào element
         - action: Click #click vào element
         - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Ấn Point of Sale'
+      webElement:
+        by: ByXPATH
+        value: '//span[contains(text(),"Validate")]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
