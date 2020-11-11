@@ -63,7 +63,7 @@ hooks:
       description: 'Lấy Tilte của Pages'
     - webDriver: SleepAction #set timeout bắt element
       description: 'Ngu Tý'
-      timeout: 60
+      timeout: 30
     - webDriver: FindElement
       description: 'Chon T1'
       webElement:
@@ -77,6 +77,14 @@ hooks:
       webElement:
         by: ByCSSSelector
         value: '[data-category-id="3"]'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon Bún chả giò'
+      webElement:
+        by: ByCSSSelector
+        value: '#article_product_92'
         ignored: True
       actions:
         - action: Click #click vào element
