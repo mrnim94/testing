@@ -67,8 +67,8 @@ hooks:
     - webDriver: FindElement
       description: 'Chon T1'
       webElement:
-        by: ByXPATH
-        value: '//span[contains(text(),"T1")]'
+        by: ByCSSSelector
+        value: '.table'
         ignored: True
       actions:
         - action: Click #click vào element
