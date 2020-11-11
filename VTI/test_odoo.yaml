@@ -61,14 +61,22 @@ hooks:
         - action: Click #click vào element
     - webDriver: Title # lấy tiêu đề
       description: 'Lấy Tilte của Pages'
-    - webDriver: SetPageLoadTimeout #set timeout bắt element
-      description: 'Thực hiện chờ síu'
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Ngu Tý'
       timeout: 60
     - webDriver: FindElement
       description: 'Chon T1'
       webElement:
         by: ByCSSSelector
         value: '.table'
+        ignored: True
+      actions:
+        - action: Click #click vào element
+    - webDriver: FindElement
+      description: 'Chon Bún'
+      webElement:
+        by: ByCSSSelector
+        value: '[data-category-id="3"]'
         ignored: True
       actions:
         - action: Click #click vào element
