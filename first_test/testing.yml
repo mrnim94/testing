@@ -66,4 +66,5 @@ hooks:
       actions:
         - action: Click
     - webDriver: Screenshot # chụp màng hình
-      description: 'Chụp hình màn hình server' 
+      description: 'Chụp hình màn hình server'
+  EndTesting:
