@@ -68,3 +68,5 @@ hooks:
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   EndTesting:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Kết thúc testing'
