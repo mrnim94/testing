@@ -126,6 +126,7 @@ hooks:
         - action: Click #click vào element
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp Ảnh Receipt'
+
   EndTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'
