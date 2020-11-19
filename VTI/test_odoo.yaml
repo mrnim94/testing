@@ -7,6 +7,9 @@ resizeWindow:
   width: 500
   height: 300
 hooks:
+  startTesting:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Bắt đầu testing'
   pageLogin:
     - webDriver: Title # lấy tiêu đề
       description: 'Lấy Tilte của Pages'
@@ -127,6 +130,6 @@ hooks:
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp Ảnh Receipt'
 
-  EndTesting:
+  endTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'
