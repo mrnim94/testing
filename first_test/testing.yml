@@ -86,7 +86,15 @@ hooks:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'test-se'
     - webDriver: FindElement
-      description: 'Tìm và Điền Tên Cho VM'
+      description: 'Chọn hệ điều hành Ubuntu'
+      webElement:
+        by: ByCSSSelector
+        value: 'div[ng-click="setOsImageType('ubuntuOS')]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'List Version'
       webElement:
         by: ByCSSSelector
         value: '#os-only-cnt > div > div:nth-child(1) > div > div.os-version > span'
@@ -94,13 +102,12 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Click tạo Server' 
+      description: 'Chon Version 18.04' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//li[contains(text(),"18.04x64")]'
         ignored: True
       actions:
-        - action: Click
         - action: Click
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
