@@ -127,26 +127,26 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chon Next' 
+      description: 'Chon Next 3' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
+        value: '//div[@ng-click="setTab(3)"][contains(text(),"NEXT")]'
         ignored: True
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chon Next' 
+      description: 'Chon Next 4' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
+        value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
         ignored: True
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chon Next' 
+      description: 'Chon Next 5' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
+        value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
         ignored: True
       actions:
         - action: Click
