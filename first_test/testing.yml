@@ -77,10 +77,19 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
+      description: 'Tìm và Điền Tên Cho VM'
+      webElement:
+        by: ByCSSSelector
+        value: 'input[ng-model="createServerRequest.name"]'
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'test-se'
+    - webDriver: FindElement
       description: 'Chọn Hệ Điều hành Ubuntu' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="os-only-cnt"]/div/div[1]/div/div[2]/span'
+        value: '//*[@id="os-only-cnt"]/div/div[1]/div/div[2]'
         ignored: True
       actions:
         - action: Click
