@@ -119,10 +119,10 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Instance Type'
-      webElement:
-        by: ByCSSSelector
-        value: 'input[name="radio2"]'
+      description: 'Instance Type' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"v1.small2x2.b100")]'
         ignored: True
       actions:
         - action: Click
