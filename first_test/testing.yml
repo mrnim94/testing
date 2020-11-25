@@ -76,6 +76,14 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: FindElement
+      description: 'Chọn Hệ Điều hành Ubuntu' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//*[@id="os-only-cnt"]/div/div[1]/div/div[2]/span'
+        ignored: True
+      actions:
+        - action: Click
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   
