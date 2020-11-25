@@ -101,6 +101,7 @@ hooks:
         ignored: True
       actions:
         - action: Click
+        - action: Click
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   
