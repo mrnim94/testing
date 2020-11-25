@@ -130,7 +130,7 @@ hooks:
       description: 'Chon Next' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(3)"][contains(text(),"NEXT")]'
+        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
         ignored: True
       actions:
         - action: Click
@@ -138,7 +138,7 @@ hooks:
       description: 'Chon Next' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(3)"][contains(text(),"NEXT")]'
+        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
         ignored: True
       actions:
         - action: Click
@@ -146,7 +146,7 @@ hooks:
       description: 'Chon Next' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(3)"][contains(text(),"NEXT")]'
+        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
         ignored: True
       actions:
         - action: Click
