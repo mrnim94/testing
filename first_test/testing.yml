@@ -111,10 +111,50 @@ hooks:
         - action: Click
         - action: Click
     - webDriver: FindElement
-      description: 'Chon Version 18.04' 
+      description: 'Chon Next' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//div[contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Instance Type'
+      webElement:
+        by: ByCSSSelector
+        value: 'input[name="radio2"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"CREATE SERVER")]'
         ignored: True
       actions:
         - action: Click
