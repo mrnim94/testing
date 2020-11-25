@@ -110,6 +110,14 @@ hooks:
       actions:
         - action: Click
         - action: Click
+    - webDriver: FindElement
+      description: 'Chon Version 18.04' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   
