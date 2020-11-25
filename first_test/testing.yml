@@ -127,20 +127,13 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chọn hệ điều hành Ubuntu'
-      webElement:
-        by: ByXPATH
-        value: '//div[contains(text(),"Ubuntu")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
       description: 'Chon Next 3' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//div[@ng-click="setTab(3)"][contains(text(),"NEXT")]'
         ignored: True
       actions:
+        - action: Click
         - action: Click
     - webDriver: FindElement
       description: 'Chon Next 4' 
