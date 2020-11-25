@@ -93,6 +93,14 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: FindElement
+      description: 'Click tạo Server' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//li[contains(text(),"18.04x64")]'
+        ignored: True
+      actions:
+        - action: Click
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   
