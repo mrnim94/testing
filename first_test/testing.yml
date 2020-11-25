@@ -89,7 +89,7 @@ hooks:
       description: 'Chọn hệ điều hành Ubuntu'
       webElement:
         by: ByCSSSelector
-        value: 'div[ng-click="setOsImageType('ubuntuOS')]'
+        value: 'div[ng-click="setOsImageType('ubuntuOS')]"'
         ignored: True
       actions:
         - action: Click
