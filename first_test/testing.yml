@@ -88,8 +88,8 @@ hooks:
     - webDriver: FindElement
       description: 'Chọn hệ điều hành Ubuntu'
       webElement:
-        by: ByCSSSelector
-        value: 'div[ng-click="setOsImageType('ubuntuOS')]"'
+        by: ByXPATH
+        value: '//div[contains(text(),"Ubuntu")]'
         ignored: True
       actions:
         - action: Click
