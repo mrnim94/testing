@@ -153,6 +153,9 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Ngủ Tý'
+      timeout: 10
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   
