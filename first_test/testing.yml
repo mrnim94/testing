@@ -114,7 +114,7 @@ hooks:
       description: 'Chon Next' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"NEXT")]'
+        value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
         ignored: True
       actions:
         - action: Click
