@@ -129,8 +129,8 @@ hooks:
     - webDriver: FindElement
       description: 'Chon Next 3' 
       webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="instance-configuration-id"]/div[3]/div[2]'
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '#instance-configuration-id > div.pull-right > div.btn.btn-cs.btn-next-step.btn-tw'
         ignored: True
       actions:
         - action: Click
