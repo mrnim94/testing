@@ -122,7 +122,7 @@ hooks:
       description: 'Instance Type' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//td[contains(text(),"v1.small2x2.b100")]'
+        value: '//td[contains(text(),"v1.small4x6.b100")]'
         ignored: True
       actions:
         - action: Click
