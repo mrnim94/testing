@@ -122,7 +122,7 @@ hooks:
       description: 'Instance Type' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'label input[type="radio"][value="5f389ea0-d623-4310-9c8f-5048f14b7504"]'
+        value: '#server-instance > tbody > tr:nth-child(8)'
         ignored: True
       actions:
         - action: Click
