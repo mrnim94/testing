@@ -156,7 +156,7 @@ hooks:
       description: 'Ngủ Tý'
       timeout: 10
     - webDriver: Screenshot # chụp màng hình
-      description: 'Chụp hình màn hình server' 
+      description: 'Chụp hình màn hình server'
   endTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'
