@@ -22,141 +22,143 @@ hooks:
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'usernameInDB'
-    - webDriver: FindElement
-      description: 'Tìm và Điền Password'
-      webElement:
-        by: ByCSSSelector
-        value: '#password'
-        ignored: True
-      actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'passwordInDB'
-    - webDriver: FindElement
-      description: 'Ấn Đăng nhập'
-      webElement:
-        by: ByCSSSelector
-        value: '[value="Login"]'
-        ignored: True
-      actions:
-        - action: Click #click vào element
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      description: 'Thực hiện chờ síu'
-      timeout: 10
-  pageMain:
-    - webDriver: Title # lấy tiêu đề
-      description: 'Lấy Tilte của Pages'
-    - webDriver: FindElement
-      description: 'Tìm đến tab vServer'
-      webElement:
-        by: ByCSSSelector
-        value: '[alt="Image of vServer"]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: SwitchWindow
-      description: 'Chuyển tab'
-      tab: 1
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      description: 'Thực hiện chờ síu'
-      timeout: 10
-    - webDriver: FindElement
-      description: 'Tìm đến tab Servers' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//a[contains(text(),"Servers")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Click tạo Server' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//span[contains(text(),"Create Server")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Tìm và Điền Tên Cho VM'
-      webElement:
-        by: ByCSSSelector
-        value: 'input[ng-model="createServerRequest.name"]'
-        ignored: True
-      actions:
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'test-se'
-    - webDriver: FindElement
-      description: 'Chọn hệ điều hành Ubuntu'
-      webElement:
-        by: ByXPATH
-        value: '//div[contains(text(),"Ubuntu")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'List Version'
-      webElement:
-        by: ByCSSSelector
-        value: '#os-only-cnt > div > div:nth-child(1) > div > div.os-version > span'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chon Version 18.04' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//li[contains(text(),"18.04x64")]'
-        ignored: True
-      actions:
-        - action: Click
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Instance Type' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: '#server-instance > tbody > tr:nth-child(8)'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: ExecuteScript
-      description: 'Click Next bằng JavaScript'
-      script: document.querySelector('div[ng-click="setTab(3)"]').click()
-    - webDriver: FindElement
-      description: 'Chon Next 4' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next 5' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    # - webDriver: FindElement
-    #   description: 'Chon Next' 
-    #   webElement: 
-    #     by: ByXPATH #tìm kí tự mong muốn
-    #     value: '//div[contains(text(),"CREATE SERVER")]'
-    #     ignored: True
-    #   actions:
-    #     - action: Click
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Ngủ Tý'
-      timeout: 10
-    - webDriver: Screenshot # chụp màng hình
-      description: 'Chụp hình màn hình server'
-  endTesting:
-    - webDriver: Title # lấy tiêu đề
-      description: 'Kết thúc testing'
+          value : 'usernameInDB'
+  #   - webDriver: FindElement
+  #     description: 'Tìm và Điền Password'
+  #     webElement:
+  #       by: ByCSSSelector
+  #       value: '#password'
+  #       ignored: True
+  #     actions:
+  #       - action: Sendkeys #đánh chữ vào ô input
+  #         value : 'passwordInDB'
+  #   - webDriver: FindElement
+  #     description: 'Ấn Đăng nhập'
+  #     webElement:
+  #       by: ByCSSSelector
+  #       value: '[value="Login"]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click #click vào element
+  #   - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+  #     description: 'Thực hiện chờ síu'
+  #     timeout: 10
+  # pageMain:
+  #   - webDriver: Title # lấy tiêu đề
+  #     description: 'Lấy Tilte của Pages'
+  #   - webDriver: FindElement
+  #     description: 'Tìm đến tab vServer'
+  #     webElement:
+  #       by: ByCSSSelector
+  #       value: '[alt="Image of vServer"]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: SwitchWindow
+  #     description: 'Chuyển tab'
+  #     tab: 1
+  #   - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+  #     description: 'Thực hiện chờ síu'
+  #     timeout: 10
+  #   - webDriver: FindElement
+  #     description: 'Tìm đến tab Servers' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//a[contains(text(),"Servers")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Click tạo Server' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//span[contains(text(),"Create Server")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Tìm và Điền Tên Cho VM'
+  #     webElement:
+  #       by: ByCSSSelector
+  #       value: 'input[ng-model="createServerRequest.name"]'
+  #       ignored: True
+  #     actions:
+  #       - action: Sendkeys #đánh chữ vào ô input
+  #         value : 'test-se'
+  #   - webDriver: FindElement
+  #     description: 'Chọn hệ điều hành Ubuntu'
+  #     webElement:
+  #       by: ByXPATH
+  #       value: '//div[contains(text(),"Ubuntu")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'List Version'
+  #     webElement:
+  #       by: ByCSSSelector
+  #       value: '#os-only-cnt > div > div:nth-child(1) > div > div.os-version > span'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chon Version 18.04' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//li[contains(text(),"18.04x64")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chon Next' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Instance Type' 
+  #     webElement: 
+  #       by: ByCSSSelector #tìm kí tự mong muốn
+  #       value: '#server-instance > tbody > tr:nth-child(8)'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: ExecuteScript
+  #     description: 'Click Next bằng JavaScript'
+  #     script: document.querySelector('div[ng-click="setTab(3)"]').click()
+  #   - webDriver: FindElement
+  #     description: 'Chon Next 4' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chon Next 5' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   # - webDriver: FindElement
+  #   #   description: 'Chon Next' 
+  #   #   webElement: 
+  #   #     by: ByXPATH #tìm kí tự mong muốn
+  #   #     value: '//div[contains(text(),"CREATE SERVER")]'
+  #   #     ignored: True
+  #   #   actions:
+  #   #     - action: Click
+  #   - webDriver: SleepAction #set timeout bắt element
+  #     description: 'Ngủ Tý'
+  #     timeout: 10
+  #   - webDriver: Screenshot # chụp màng hình
+  #     description: 'Chụp hình màn hình server'
+  # endTesting:
+  #   - webDriver: Title # lấy tiêu đề
+  #     description: 'Kết thúc testing'
