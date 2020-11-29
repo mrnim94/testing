@@ -22,8 +22,7 @@ hooks:
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'usernameInDB'
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'usernameInDB'
+        - action: Click #click vào element
   #   - webDriver: FindElement
   #     description: 'Tìm và Điền Password'
   #     webElement:
