@@ -155,8 +155,8 @@ hooks:
     - webDriver: SleepAction #set timeout bắt element
       description: 'Ngủ Tý'
       timeout: 10
-  #   - webDriver: Screenshot # chụp màng hình
-  #     description: 'Chụp hình màn hình server'
+    - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp hình màn hình server'
   endTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'
