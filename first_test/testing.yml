@@ -144,17 +144,17 @@ hooks:
         ignored: True
       actions:
         - action: Click
-    # - webDriver: FindElement
-    #   description: 'Chon Next' 
-    #   webElement: 
-    #     by: ByXPATH #tìm kí tự mong muốn
-    #     value: '//div[contains(text(),"CREATE SERVER")]'
-    #     ignored: True
-    #   actions:
-    #     - action: Click
-  #   - webDriver: SleepAction #set timeout bắt element
-  #     description: 'Ngủ Tý'
-  #     timeout: 10
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"CREATE SERVER")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Ngủ Tý'
+      timeout: 10
   #   - webDriver: Screenshot # chụp màng hình
   #     description: 'Chụp hình màn hình server'
   endTesting:
