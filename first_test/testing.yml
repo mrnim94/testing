@@ -168,12 +168,12 @@ hooks:
           value : 'test-se'
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
-      timeout: 20
+      timeout: 60
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"ACTIVE")]'
+        value: '//p[contains(text(),"test-se")]'
         ignored: True
       actions:
         - action: Text
