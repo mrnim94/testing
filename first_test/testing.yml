@@ -153,9 +153,30 @@ hooks:
         ignored: True
       actions:
         - action: Click
+  listVM:
     - webDriver: SleepAction #set timeout bắt element
       description: 'Ngủ Tý'
       timeout: 10
+    - webDriver: FindElement
+      description: 'Instance Type' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'input[ng-model="filterSearchText"]'
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'test-se'
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện chờ síu'
+      timeout: 20
+    - webDriver: FindElement
+      description: 'Check VM mới tạo đã acitive' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"ACTIVE")]'
+        ignored: True
+      actions:
+        - action: Text
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   endTesting:
