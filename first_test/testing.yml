@@ -67,6 +67,7 @@ hooks:
         ignored: True
       actions:
         - action: Click
+  pageCreateVM:      
     - webDriver: FindElement
       description: 'Click tạo Server' 
       webElement: 
