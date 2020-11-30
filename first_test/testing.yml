@@ -158,7 +158,7 @@ hooks:
       description: 'Ngủ Tý'
       timeout: 120
     - webDriver: FindElement
-      description: 'Instance Type' 
+      description: 'Tìm VM mà ta muốn' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: 'input[ng-model="filterSearchText"]'
