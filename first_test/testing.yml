@@ -154,9 +154,6 @@ hooks:
       actions:
         - action: Click
   listVM:
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Ngủ Tý'
-      timeout: 120
     - webDriver: FindElement
       description: 'Tìm VM mà ta muốn' 
       webElement: 
@@ -168,13 +165,13 @@ hooks:
           value : 'test-se'
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
-      timeout: 120
+      timeout: 10
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"test-se")]'
-        ignored: True
+        ignored: False
       actions:
         - action: Text
     - webDriver: Screenshot # chụp màng hình
