@@ -171,7 +171,7 @@ hooks:
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"test-se")]'
-        ignored: False
+        ignored: True
       actions:
         - action: Text
     - webDriver: Screenshot # chụp màng hình
