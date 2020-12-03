@@ -145,14 +145,14 @@ hooks:
         ignored: True
       actions:
         - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"CREATE SERVER")]'
-        ignored: True
-      actions:
-        - action: Click
+    # - webDriver: FindElement
+    #   description: 'Chon Next' 
+    #   webElement: 
+    #     by: ByXPATH #tìm kí tự mong muốn
+    #     value: '//div[contains(text(),"CREATE SERVER")]'
+    #     ignored: True
+    #   actions:
+    #     - action: Click
   listVM:
     - webDriver: FindElement
       description: 'Tìm VM mà ta muốn' 
