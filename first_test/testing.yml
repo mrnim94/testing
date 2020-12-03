@@ -159,7 +159,7 @@ hooks:
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: 'input[ng-model="filterSearchText"]'
-        ignored: True
+        ignored: False
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'test-se'
