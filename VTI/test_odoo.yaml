@@ -38,6 +38,7 @@ hooks:
         value: '//button[contains(text(),"Đăng nhập")]'
         ignored: True
       actions:
+        - action: Text
         - action: Click #click vào element
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
@@ -129,6 +130,12 @@ hooks:
         - action: Click #click vào element
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp Ảnh Receipt'
+    - webDriver: ExecuteScript
+      description: 'Click Next bằng JavaScript'
+      script: document.querySelector('div[ng-click="setTab(3)"]').click()
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Truy cập link web mới'
+      newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
 
   endTesting:
     - webDriver: Title # lấy tiêu đề
