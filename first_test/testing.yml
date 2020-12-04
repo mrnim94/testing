@@ -171,11 +171,14 @@ hooks:
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"test-se")]'
-        ignored: True
+        ignored: False
       actions:
         - action: Text
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Truy cập link web mới'
+      newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
   endTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'
