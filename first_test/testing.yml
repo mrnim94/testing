@@ -146,7 +146,7 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chon Next' 
+      description: 'Ấn tạo server' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//div[contains(text(),"CREATE SERVER")]'
