@@ -138,6 +138,14 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
+      description: 'Chọn Network private_network' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"private_network")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
       description: 'Chon Next 5' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
