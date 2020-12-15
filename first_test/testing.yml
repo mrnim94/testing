@@ -145,14 +145,14 @@ hooks:
         ignored: True
       actions:
         - action: Click
-    # - webDriver: FindElement
-    #   description: 'Chon Next' 
-    #   webElement: 
-    #     by: ByXPATH #tìm kí tự mong muốn
-    #     value: '//div[contains(text(),"CREATE SERVER")]'
-    #     ignored: True
-    #   actions:
-    #     - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"CREATE SERVER")]'
+        ignored: True
+      actions:
+        - action: Click
   listVM:
     - webDriver: FindElement
       description: 'Tìm VM mà ta muốn' 
@@ -165,18 +165,18 @@ hooks:
           value : 'test-se'
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
-      timeout: 10
+      timeout: 120
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"test-se")]'
-        ignored: False
+        ignored: True
       actions:
         - action: Text
-    - webDriver: AccessNewUrl # chụp màng hình
-      description: 'Truy cập link web mới'
-      newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
+    # - webDriver: AccessNewUrl # chụp màng hình
+    #   description: 'Truy cập link web mới'
+    #   newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
   endTesting:
