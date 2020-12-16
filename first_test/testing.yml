@@ -173,7 +173,7 @@ hooks:
           value : 'test-se'
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện chờ síu'
-      timeout: 60
+      timeout: 120
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
