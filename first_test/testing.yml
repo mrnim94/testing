@@ -171,9 +171,12 @@ hooks:
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'test-se'
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      description: 'Thực hiện chờ síu'
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 120 phút'
       timeout: 120
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện tìm kiếm VM trong vòng 60s'
+      timeout: 60
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
