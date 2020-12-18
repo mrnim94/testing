@@ -8,5 +8,6 @@ resizeWindow:
   height: 300
 pages:
   - login_portal
+  - view_main
   - create_vm
   - list_vm
