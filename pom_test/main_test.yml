@@ -7,7 +7,9 @@ resizeWindow:
   width: 500
   height: 300
 actions:
+  - start_testing
   - login_portal
   - view_main
   - create_vm
   - list_vm
+  - end_testing
