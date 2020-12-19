@@ -1,33 +1,32 @@
-hooks:
-  pageLogin:
-    - webDriver: Title # lấy tiêu đề
-      description: 'Lấy Tilte của Pages'
-    - webDriver: FindElement
-      description: 'Tìm và Điền User'
-      webElement:
-        by: ByCSSSelector
-        value: '#username'
-        ignored: True
-      actions:
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'usernameInDB'
-    - webDriver: FindElement
-      description: 'Tìm và Điền Password'
-      webElement:
-        by: ByCSSSelector
-        value: '#password'
-        ignored: True
-      actions:
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'passwordInDB'
-    - webDriver: FindElement
-      description: 'Ấn Đăng nhập'
-      webElement:
-        by: ByCSSSelector
-        value: '[value="Login"]'
-        ignored: True
-      actions:
-        - action: Click #click vào element
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      description: 'Thực hiện chờ síu'
-      timeout: 10
+pageLogin:
+  - webDriver: Title # lấy tiêu đề
+    description: 'Lấy Tilte của Pages'
+  - webDriver: FindElement
+    description: 'Tìm và Điền User'
+    webElement:
+      by: ByCSSSelector
+      value: '#username'
+      ignored: True
+    actions:
+      - action: Sendkeys #đánh chữ vào ô input
+        value : 'usernameInDB'
+  - webDriver: FindElement
+    description: 'Tìm và Điền Password'
+    webElement:
+      by: ByCSSSelector
+      value: '#password'
+      ignored: True
+    actions:
+      - action: Sendkeys #đánh chữ vào ô input
+        value : 'passwordInDB'
+  - webDriver: FindElement
+    description: 'Ấn Đăng nhập'
+    webElement:
+      by: ByCSSSelector
+      value: '[value="Login"]'
+      ignored: True
+    actions:
+      - action: Click #click vào element
+  - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+    description: 'Thực hiện chờ síu'
+    timeout: 10
