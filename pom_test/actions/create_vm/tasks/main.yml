@@ -1,94 +1,95 @@
-pageCreateVM:      
-  - webDriver: FindElement
-    description: 'Click tạo Server' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//span[contains(text(),"Create Server")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Tìm và Điền Tên Cho VM'
-    webElement:
-      by: ByCSSSelector
-      value: 'input[ng-model="createServerRequest.name"]'
-      ignored: True
-    actions:
-      - action: Sendkeys #đánh chữ vào ô input
-        value : 'test-se'
-  - webDriver: FindElement
-    description: 'Chọn hệ điều hành Ubuntu'
-    webElement:
-      by: ByXPATH
-      value: '//div[contains(text(),"Ubuntu")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'List Version'
-    webElement:
-      by: ByCSSSelector
-      value: '#os-only-cnt > div > div:nth-child(1) > div > div.os-version > span'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Chon Version 18.04' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//li[contains(text(),"18.04x64")]'
-      ignored: True
-    actions:
-      - action: Click
-      - action: Click
-  - webDriver: FindElement
-    description: 'Chon Next' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Instance Type' 
-    webElement: 
-      by: ByCSSSelector #tìm kí tự mong muốn
-      value: '#server-instance > tbody > tr:nth-child(8)'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: ExecuteScript
-    description: 'Click Next bằng JavaScript'
-    script: document.querySelector('div[ng-click="setTab(3)"]').click()
-  - webDriver: FindElement
-    description: 'Chon Next 4' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Chọn Network private_network' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//div[contains(text(),"private_network")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Chon Next 5' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: FindElement
-    description: 'Ấn tạo server' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//div[contains(text(),"CREATE SERVER")]'
-      ignored: True
-    actions:
-      - action: Click
+hooks:
+  pageCreateVM:      
+    - webDriver: FindElement
+      description: 'Click tạo Server' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//span[contains(text(),"Create Server")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Tìm và Điền Tên Cho VM'
+      webElement:
+        by: ByCSSSelector
+        value: 'input[ng-model="createServerRequest.name"]'
+        ignored: True
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'test-se'
+    - webDriver: FindElement
+      description: 'Chọn hệ điều hành Ubuntu'
+      webElement:
+        by: ByXPATH
+        value: '//div[contains(text(),"Ubuntu")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'List Version'
+      webElement:
+        by: ByCSSSelector
+        value: '#os-only-cnt > div > div:nth-child(1) > div > div.os-version > span'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Version 18.04' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//li[contains(text(),"18.04x64")]'
+        ignored: True
+      actions:
+        - action: Click
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Instance Type' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '#server-instance > tbody > tr:nth-child(8)'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: ExecuteScript
+      description: 'Click Next bằng JavaScript'
+      script: document.querySelector('div[ng-click="setTab(3)"]').click()
+    - webDriver: FindElement
+      description: 'Chon Next 4' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chọn Network private_network' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"private_network")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next 5' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Ấn tạo server' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"CREATE SERVER")]'
+        ignored: True
+      actions:
+        - action: Click

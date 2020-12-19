@@ -1,25 +1,26 @@
-pageMain:
-  - webDriver: Title # lấy tiêu đề
-    description: 'Lấy Tilte của Pages'
-  - webDriver: FindElement
-    description: 'Tìm đến tab vServer'
-    webElement:
-      by: ByCSSSelector
-      value: '[alt="Image of vServer"]'
-      ignored: True
-    actions:
-      - action: Click
-  - webDriver: SwitchWindow
-    description: 'Chuyển tab'
-    tab: 1
-  - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-    description: 'Thực hiện chờ síu'
-    timeout: 10
-  - webDriver: FindElement
-    description: 'Tìm đến tab Servers' 
-    webElement: 
-      by: ByXPATH #tìm kí tự mong muốn
-      value: '//a[contains(text(),"Servers")]'
-      ignored: True
-    actions:
-      - action: Click
+hooks:
+  pageMain:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: FindElement
+      description: 'Tìm đến tab vServer'
+      webElement:
+        by: ByCSSSelector
+        value: '[alt="Image of vServer"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: SwitchWindow
+      description: 'Chuyển tab'
+      tab: 1
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện chờ síu'
+      timeout: 10
+    - webDriver: FindElement
+      description: 'Tìm đến tab Servers' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//a[contains(text(),"Servers")]'
+        ignored: True
+      actions:
+        - action: Click
