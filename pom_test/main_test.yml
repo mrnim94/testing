@@ -6,7 +6,7 @@ resizeWindow:
   name: thangta
   width: 500
   height: 300
-pages:
+actions:
   - login_portal
   - view_main
   - create_vm
