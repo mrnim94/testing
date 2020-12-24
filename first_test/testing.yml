@@ -101,89 +101,104 @@ hooks:
         ignored: True
       actions:
         - action: Click
-    - webDriver: FindElement
-      description: 'Chon Version 18.04' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//li[contains(text(),"18.04x64")]'
+    - webDriver: FindElements
+      description: 'Chon Bún chả giò'
+      webElement:
+        by: ByCSSSelector
+        value: '#article_product_92'
         ignored: True
+      checkElements:
+        countElements: 6
+        memberOfElements:
+          - value: 14.04.5x64
+          - value: 18.04x64
+          - value: Ubuntu-14.04.5x64-MKT
       actions:
-        - action: Click
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Instance Type' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: '#server-instance > tbody > tr:nth-child(8)'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: ExecuteScript
-      description: 'Click Next bằng JavaScript'
-      script: document.querySelector('div[ng-click="setTab(3)"]').click()
-    - webDriver: FindElement
-      description: 'Chon Next 4' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chọn Network private_network' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"private_network")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next 5' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
-    - webDriver: FindElement
-      description: 'Ấn tạo server' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"CREATE SERVER")]'
-        ignored: True
-      actions:
-        - action: Click
-  listVM:
-    - webDriver: FindElement
-      description: 'Tìm VM mà ta muốn' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'input[ng-model="filterSearchText"]'
-        ignored: False
-      actions:
-        - action: Sendkeys #đánh chữ vào ô input
-          value : 'test-se'
-    - webDriver: FindElement
-      description: 'Check VM mới tạo đã acitive' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//p[contains(text(),"test-se")]'
-        ignored: False
-      actions:
-        - action: Text
-    # - webDriver: AccessNewUrl # chụp màng hình
-    #   description: 'Truy cập link web mới'
-    #   newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
-    - webDriver: Screenshot # chụp màng hình
-      description: 'Chụp hình màn hình server'
+        - declareElement4Click: 'random'
+        - action: Click #click vào element 
+  #   - webDriver: FindElement
+  #     description: 'Chon Version 18.04' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//li[contains(text(),"18.04x64")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chon Next' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Instance Type' 
+  #     webElement: 
+  #       by: ByCSSSelector #tìm kí tự mong muốn
+  #       value: '#server-instance > tbody > tr:nth-child(8)'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: ExecuteScript
+  #     description: 'Click Next bằng JavaScript'
+  #     script: document.querySelector('div[ng-click="setTab(3)"]').click()
+  #   - webDriver: FindElement
+  #     description: 'Chon Next 4' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(4)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chọn Network private_network' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[contains(text(),"private_network")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Chon Next 5' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[@ng-click="setTab(5)"][contains(text(),"NEXT")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  #   - webDriver: FindElement
+  #     description: 'Ấn tạo server' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//div[contains(text(),"CREATE SERVER")]'
+  #       ignored: True
+  #     actions:
+  #       - action: Click
+  # listVM:
+  #   - webDriver: FindElement
+  #     description: 'Tìm VM mà ta muốn' 
+  #     webElement: 
+  #       by: ByCSSSelector #tìm kí tự mong muốn
+  #       value: 'input[ng-model="filterSearchText"]'
+  #       ignored: False
+  #     actions:
+  #       - action: Sendkeys #đánh chữ vào ô input
+  #         value : 'test-se'
+  #   - webDriver: FindElement
+  #     description: 'Check VM mới tạo đã acitive' 
+  #     webElement: 
+  #       by: ByXPATH #tìm kí tự mong muốn
+  #       value: '//p[contains(text(),"test-se")]'
+  #       ignored: False
+  #     actions:
+  #       - action: Text
+  #   # - webDriver: AccessNewUrl # chụp màng hình
+  #   #   description: 'Truy cập link web mới'
+  #   #   newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
+  #   - webDriver: Screenshot # chụp màng hình
+  #     description: 'Chụp hình màn hình server'
   endTesting:
     - webDriver: Title # lấy tiêu đề
       description: 'Kết thúc testing'

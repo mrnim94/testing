@@ -136,6 +136,22 @@ hooks:
     - webDriver: AccessNewUrl # chụp màng hình
       description: 'Truy cập link web mới'
       newUrl: 'https://sdn-portal.vngcloud.vn/ops/overview.html'
+      #########################
+    - webDriver: FindElements
+      description: 'Chon Bún chả giò'
+      webElement:
+        by: ByCSSSelector
+        value: '#article_product_92'
+        ignored: True
+      checkElements:
+        countElements: 6
+        memberOfElements:
+          - value: 14.04.5x64
+          - value: 18.04x64
+          - value: Ubuntu-14.04.5x64-MKT
+      actions:
+        - declareElement4Click: 'random'
+        - action: Click #click vào element  
 
   endTesting:
     - webDriver: Title # lấy tiêu đề
