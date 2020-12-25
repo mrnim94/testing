@@ -105,7 +105,7 @@ hooks:
       description: 'Chon Bún chả giò'
       webElement:
         by: ByCSSSelector
-        value: '#article_product_92'
+        value: '[ng-repeat="image in osImages.ubuntuOS"]'
         ignored: True
       checkElements:
         countElements: 6
