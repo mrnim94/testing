@@ -108,7 +108,7 @@ hooks:
         value: '[ng-repeat="image in osImages.ubuntuOS"]'
         ignored: True
       checkElements:
-        countElements: 4
+        # countElements: 4
         memberOfElements:
           - value: 14.04.5x64
           - value: 18.04x64
