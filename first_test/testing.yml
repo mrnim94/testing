@@ -108,11 +108,11 @@ hooks:
         value: '[ng-repeat="image in osImages.ubuntuOS"]'
         ignored: True
       checkElements:
-        # countElements: 4
-        memberOfElements:
-          - value: 14.04.5x64
-          - value: 18.04x64
-          - value: Ubuntu-14.04.5x64-MKT
+        countElements: 4
+        # memberOfElements:
+        #   - value: 14.04.5x64
+        #   - value: 18.04x64
+        #   - value: Ubuntu-14.04.5x64-MKT
         declareElement4Click: 'random'
       actions:
         - action: Click #click vào element
