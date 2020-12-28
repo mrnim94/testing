@@ -9,4 +9,5 @@ resizeWindow:
 actions:
   - start_testing
   - login_portal
+  - input_infor_ubuntu
   - end_testing
