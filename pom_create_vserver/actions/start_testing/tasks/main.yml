@@ -1,0 +1,4 @@
+hooks:
+  startTesting:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Bắt đầu testing'
