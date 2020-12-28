@@ -1,4 +1,0 @@
-hooks:
-  endTesting:
-    - webDriver: Title # lấy tiêu đề
-      description: 'Kết thúc testing'
