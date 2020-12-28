@@ -113,7 +113,7 @@ hooks:
           - value: 14.04.5x64
           - value: 18.04x64
           - value: Ubuntu-14.04.5x64-MKT
-        declareElement4Click: 'random'
+        declareElement4Click: 'aaa'
       actions:
         - action: Click #click vào element
     - webDriver: Screenshot # chụp màng hình
