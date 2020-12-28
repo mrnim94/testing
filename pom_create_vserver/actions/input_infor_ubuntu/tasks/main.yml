@@ -36,7 +36,7 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElements
-      description: 'Chon Bún chả giò'
+      description: 'Check list Ubuntu và Click Tạo VM Ubuntu random'
       webElement:
         by: ByCSSSelector
         value: '[ng-repeat="image in osImages.ubuntuOS"]'
