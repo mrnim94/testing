@@ -1,0 +1,6 @@
+hooks:
+  screenShot:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp hình màn hình server'

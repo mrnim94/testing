@@ -10,4 +10,5 @@ actions:
   - start_testing
   - login_portal
   - input_infor_ubuntu
+  - screen_shot
   - end_testing
