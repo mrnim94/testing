@@ -1,0 +1,43 @@
+hooks:
+  instanceType:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: FindElement
+      description: 'Click vào  Flavor Zone'
+      webElement:
+        by: ByCSSSelector
+        value: 'select[ng-model="selectedFlavorZone"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chọn General v1 Instances'
+      webElement:
+        by: ByCSSSelector
+        value: 'option[value="object:154"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElements
+      description: 'Check list flavor và Click Tạo VM flavor random'
+      webElement:
+        by: ByCSSSelector
+        value: 'tr.ng-scope[ng-repeat="flavor in filteredFlavors"]'
+        ignored: True
+      checkElements:
+        countElements: 18
+        memberOfElements:
+          - value: v1.small2x8.b100
+          - value: v1.small1x1.b100
+          - value: v1.large24x64.b100
+        declareElement4Click: 'random'
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Chon Next để hoàn thành Tab Instance Type' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'div[ng-click="setTab(3)"]'
+        ignored: True
+      actions:
+        - action: Click

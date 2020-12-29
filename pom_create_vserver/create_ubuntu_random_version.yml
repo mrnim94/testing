@@ -9,6 +9,7 @@ resizeWindow:
 actions:
   - start_testing
   - login_portal
-  - input_infor_ubuntu
+  - basic_configuration_create_vm
+  - instance_type_create_vm
   - screen_shot
   - end_testing
