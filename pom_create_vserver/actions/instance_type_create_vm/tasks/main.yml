@@ -34,5 +34,5 @@ hooks:
       actions:
         - action: Click
     - webDriver: ExecuteScript
-        description: 'Click Next bằng JavaScript hoàn thành tab Instance Type'
-        script: document.querySelector('div[ng-click="setTab(3)"]').click()
+      description: 'Click Next bằng JavaScript hoàn thành tab Instance Type'
+      script: document.querySelector('div[ng-click="setTab(3)"]').click()
