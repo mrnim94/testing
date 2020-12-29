@@ -1,0 +1,7 @@
+hooks:
+  volumeSettings:
+    - webDriver: Title # lấy tiêu đề
+      description: 'Lấy Tilte của Pages'
+    - webDriver: ExecuteScript
+      description: 'Click Next bằng JavaScript hoàn thành tab Instance Type'
+      script: document.querySelector('div[ng-click="setTab(5)"]').click()
