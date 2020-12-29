@@ -22,7 +22,7 @@ hooks:
       description: 'Check list flavor và Click Tạo VM flavor random'
       webElement:
         by: ByCSSSelector
-        value: 'tr.ng-scope[ng-repeat="flavor in filteredFlavors"]'
+        value: 'tr.ng-scope[ng-repeat="flavor in filteredFlavors"] > td[ng-bind="flavor.name"]'
         ignored: True
       checkElements:
         countElements: 18
