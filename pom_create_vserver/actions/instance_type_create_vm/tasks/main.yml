@@ -33,11 +33,6 @@ hooks:
         declareElement4Click: 'random'
       actions:
         - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next để hoàn thành Tab Instance Type' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'div[ng-click="setTab(3)"]'
-        ignored: True
-      actions:
-        - action: Click
+    - webDriver: ExecuteScript
+        description: 'Click Next bằng JavaScript hoàn thành tab Instance Type'
+        script: document.querySelector('div[ng-click="setTab(3)"]').click()
