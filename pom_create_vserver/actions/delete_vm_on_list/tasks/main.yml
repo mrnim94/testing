@@ -1,5 +1,8 @@
 hooks:
   waitingAndDelete:
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
       timeout: 60
