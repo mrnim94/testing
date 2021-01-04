@@ -50,11 +50,14 @@ hooks:
         declareElement4Click: 'random'
       actions:
         - action: Click
-    - webDriver: FindElement
-      description: 'Chon Next để hoàn thành Tab Basic Configuration' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
-        ignored: True
-      actions:
-        - action: Click
+    # - webDriver: FindElement
+    #   description: 'Chon Next để hoàn thành Tab Basic Configuration' 
+    #   webElement: 
+    #     by: ByXPATH #tìm kí tự mong muốn
+    #     value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
+    #     ignored: True
+    #   actions:
+    #     - action: Click
+    - webDriver: ExecuteScript
+      description: 'Chon Next để hoàn thành Tab Basic Configuration'
+      script: document.querySelector('div[ng-click="setTab(2)"]').click()
