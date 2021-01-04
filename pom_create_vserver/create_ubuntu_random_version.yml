@@ -14,4 +14,6 @@ actions:
   - volume_settings
   - other_settings
   - screen_shot
+  - summary_settings
+  - waiting_and_check
   - end_testing

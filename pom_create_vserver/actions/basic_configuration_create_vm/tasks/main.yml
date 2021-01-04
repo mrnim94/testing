@@ -42,22 +42,14 @@ hooks:
         value: '[ng-repeat="image in osImages.ubuntuOS"]'
         ignored: True
       checkElements:
-        countElements: 4
+        countElements: 3
         memberOfElements:
-          - value: 14.04.5x64
-          - value: 18.04x64
-          - value: Ubuntu-14.04.5x64-MKT
+          - value: 1-Ubuntu-16.04.5x64
+          - value: 1-Ubuntu-14.04.5x64
+          - value: 1-Ubuntu-18.04x64
         declareElement4Click: 'random'
       actions:
         - action: Click
-    # - webDriver: FindElement
-    #   description: 'Chon Next để hoàn thành Tab Basic Configuration' 
-    #   webElement: 
-    #     by: ByXPATH #tìm kí tự mong muốn
-    #     value: '//div[@ng-click="setTab(2)"][contains(text(),"NEXT")]'
-    #     ignored: True
-    #   actions:
-    #     - action: Click
     - webDriver: ExecuteScript
       description: 'Chon Next để hoàn thành Tab Basic Configuration'
       script: document.querySelector('div[ng-click="setTab(2)"]').click()

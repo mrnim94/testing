@@ -1,0 +1,12 @@
+hooks:
+  summarySettings:
+    - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp hình màn hình server'
+    - webDriver: FindElement
+      description: 'Click tạo Server' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"CREATE SERVER")]'
+        ignored: True
+      actions:
+        - action: Click

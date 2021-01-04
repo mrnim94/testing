@@ -1,0 +1,25 @@
+hooks:
+  waitingAndCheck:
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 120s'
+      timeout: 120
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
+      timeout: 60
+    - webDriver: FindElement
+      description: 'Tìm VM mà ta muốn' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'input[ng-model="filterSearchText"]'
+        ignored: False
+      actions:
+        - action: Sendkeys #đánh chữ vào ô input
+          value : 'Ubuntu-SE-Random'
+    - webDriver: FindElement
+      description: 'Check VM mới tạo đã acitive' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"test-se")]'
+        ignored: True
+      actions:
+        - action: Text
