@@ -14,7 +14,7 @@ hooks:
       description: 'Chọn General v1 Instances'
       webElement:
         by: ByCSSSelector
-        value: "option[value='object:156']"
+        value: option[value='object:156']
         ignored: True
       actions:
         - action: Click
