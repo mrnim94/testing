@@ -1,7 +1,7 @@
 version: 0.0
-nameTest: CreateUbuntuRandomVersion
+nameTest: DeleteUbuntuRandomVersion
 browser: chome
-web: "https://portal3.vngcloud.vn/servers/create.html"
+web: "https://portal3.vngcloud.vn/servers/list.html"
 resizeWindow:
   name: thangta
   width: 500
@@ -9,11 +9,6 @@ resizeWindow:
 actions:
   - start_testing
   - login_portal
-  - basic_configuration_create_vm
-  - instance_type_create_vm
-  - volume_settings
-  - other_settings
+  - delete_vm_on_list
   - screen_shot
-  - summary_settings
-  - waiting_and_check
   - end_testing

@@ -1,0 +1,19 @@
+version: 0.0
+nameTest: CreateUbuntuRandomVersion
+browser: chome
+web: "https://portal3.vngcloud.vn/servers/create.html"
+resizeWindow:
+  name: thangta
+  width: 500
+  height: 300
+actions:
+  - start_testing
+  - login_portal
+  - basic_configuration_create_vm
+  - instance_type_create_vm
+  - volume_settings
+  - other_settings
+  - summary_settings
+  - waiting_and_check
+  - screen_shot
+  - end_testing
