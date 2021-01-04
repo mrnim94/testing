@@ -1,5 +1,5 @@
 hooks:
-  waitingAndCheck:
+  waitingAndDelete:
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
       timeout: 60
