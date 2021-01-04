@@ -46,4 +46,4 @@ hooks:
         value: "a#delete-server-btn"
         ignored: False
       actions:
-        - action: Text #đánh chữ vào ô input
+        - action: Click #đánh chữ vào ô input
