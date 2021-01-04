@@ -1,8 +1,8 @@
 hooks:
   waitingAndCheck:
     - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện Sleep trong 120s'
-      timeout: 120
+      description: 'Thực hiện Sleep trong 60s'
+      timeout: 60
     - webDriver: SetImplicitWaitTimeout #set timeout bắt element
       description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
       timeout: 60
@@ -19,7 +19,7 @@ hooks:
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//p[contains(text(),"test-se")]'
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]'
         ignored: True
       actions:
         - action: Text
