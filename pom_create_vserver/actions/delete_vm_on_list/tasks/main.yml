@@ -40,10 +40,21 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Delete VM' 
+      description: 'Click Delete VM trong Action' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: "a#delete-server-btn"
         ignored: False
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click Delete VM trong Action' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'a[ng-click="deleteServers()"]'
+        ignored: False
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
