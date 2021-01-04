@@ -11,13 +11,13 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Chọn General v1 Instances'
-      webElement:
-        by: ByCSSSelector
-        value: option[value='object:156']
+      description: 'Chọn General v1 Instances' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//option[contains(text(),"General v1 Instances")]'
         ignored: True
       actions:
-        - action: Click
+        - action: Text
     - webDriver: FindElements
       description: 'Check list flavor và Click Tạo VM flavor random'
       webElement:
