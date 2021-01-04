@@ -9,6 +9,11 @@ resizeWindow:
 actions:
   - start_testing
   - login_portal
-  - delete_vm_on_list
+  - basic_configuration_create_vm
+  - instance_type_create_vm
+  - volume_settings
+  - other_settings
+  - summary_settings
+  - waiting_and_check
   - screen_shot
   - end_testing
