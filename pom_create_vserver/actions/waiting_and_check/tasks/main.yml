@@ -16,11 +16,11 @@ hooks:
         - action: Sendkeys #đánh chữ vào ô input
           value: 'Ubuntu-SE-Random'
     - webDriver: FindElement
-      description: 'Check VM mới tạo đã acitive' 
+      description: 'Check VM mới Ubuntu-SE-Random tạo đã acitive hay chưa' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//following-sibling::div//following-sibling::div/div[1]'
         ignored: True
       actions:
         - action: Text
-          check: Ubuntu-SE-Random
+          check: ACTIVE
