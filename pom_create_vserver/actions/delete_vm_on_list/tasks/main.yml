@@ -44,7 +44,7 @@ hooks:
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: "a#delete-server-btn"
-        ignored: False
+        ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
     - webDriver: FindElement
@@ -52,9 +52,33 @@ hooks:
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: 'a[ng-click="deleteServers()"]'
-        ignored: False
+        ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
     - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện Sleep trong 10s'
-      timeout: 10
+      description: 'Thực hiện Sleep trong 120s'
+      timeout: 120
+    - webDriver: FindElement
+      description: 'Click thùng rác' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'span.headerNumber.trashItemNumber'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input  
+    - webDriver: FindElement
+      description: 'Click Delete VM trong thùng rác' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '[resourcename="Ubuntu-SE-Random"] > td#doDelete'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click Confirm Delete VM trong thùng rác' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'button.btn.btn-primary.btn-modal-accept.btn-accept-remove-resource'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
