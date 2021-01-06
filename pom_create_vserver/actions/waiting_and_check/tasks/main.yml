@@ -11,7 +11,7 @@ hooks:
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: 'input[ng-model="filterSearchText"]'
-        ignored: False
+        ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value : 'Ubuntu-SE-Random'
