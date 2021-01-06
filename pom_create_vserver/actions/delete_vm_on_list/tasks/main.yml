@@ -16,7 +16,7 @@ hooks:
         - action: Sendkeys #đánh chữ vào ô input
           value: 'Ubuntu-SE-Random'
     - webDriver: FindElement
-      description: 'Check VM mới tạo đã acitive' 
+      description: 'Check VM có trong List không' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
         value: '//p[contains(text(),"Ubuntu-SE-Random")]'
