@@ -70,7 +70,7 @@ hooks:
       description: 'Click Delete VM trong thùng rác' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: '[resourcename="Ubuntu-SE-Random"] > td#doDelete'
+        value: 'tr[resourcename="Ubuntu-SE-Random"] > td#doDelete > i.fa-trash'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
