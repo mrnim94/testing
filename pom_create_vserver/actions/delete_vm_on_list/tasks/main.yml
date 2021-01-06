@@ -14,7 +14,7 @@ hooks:
         ignored: False
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'Ubuntu-SE-Random'
+          value: 'Ubuntu-SE-Random'
     - webDriver: FindElement
       description: 'Check VM mới tạo đã acitive' 
       webElement: 
@@ -26,9 +26,9 @@ hooks:
     - webDriver: FindElement
       description: 'Click checkbox VM' 
       webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: span.checkmark
-        ignored: False
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
     - webDriver: FindElement
