@@ -10,7 +10,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'usernameInDB'
+          value: 'usernameInDB'
     - webDriver: FindElement
       description: 'Tìm và Điền Password'
       webElement:
@@ -19,7 +19,7 @@ hooks:
         ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
-          value : 'passwordInDB'
+          value: 'passwordInDB'
     - webDriver: FindElement
       description: 'Ấn Đăng nhập'
       webElement:
