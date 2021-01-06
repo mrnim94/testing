@@ -7,7 +7,7 @@ hooks:
       description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
       timeout: 60
     - webDriver: FindElement
-      description: 'Tìm VM mà ta muốn check sta' 
+      description: 'Tìm VM mà ta muốn check status' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: 'input[ng-model="filterSearchText"]'
