@@ -72,8 +72,8 @@ hooks:
     - webDriver: FindElement
       description: 'Click Confirm Delete VM trong thùng rác' 
       webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="modal-confirm_yn"]/div/div/div[3]/button[3]/text()'
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '.btn-accept-remove-resource'
         ignored: True
       actions:
         - action: Click
