@@ -66,14 +66,9 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input  
-    - webDriver: FindElement
-      description: 'Click Delete VM trong thùng rác' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'tr[resourcename="Ubuntu-SE-Random"] > td#doDelete > i.fa-trash'
-        ignored: True
-      actions:
-        - action: Click #đánh chữ vào ô input
+    - webDriver: ExecuteScript
+      description: 'Click Delete VM trong thùng rác'
+      script: document.querySelector('tr[resourcename="Ubuntu-SE-Random"]>td#doDelete>i.fa-trash').click()
     - webDriver: FindElement
       description: 'Click Confirm Delete VM trong thùng rác' 
       webElement: 
