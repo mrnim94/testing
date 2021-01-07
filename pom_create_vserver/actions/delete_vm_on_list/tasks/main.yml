@@ -77,3 +77,6 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 20s'
+      timeout: 20
