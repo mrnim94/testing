@@ -105,3 +105,18 @@ có 3 action cụ thể:
 | action: Sendkeys| gửi kí tự đã được khai báo ở **value** |
 | action: Click| Click vào element đó |
 | action: Text| thực hiện lấy text ở element đó, nếu có **check: ACTIVE** thì lấy text đã lấy được và so sánh với giá trị được khai báo ở **check** |
+
+## Sleep.
+SleepAction thực hiện sleep trong 1 khoảng thời gian nhất định khi hết thời gian thì nó thực hiện bước tiếp theo.
+
+```sh
+- webDriver: SleepAction #set timeout bắt element
+  description: 'Thực hiện Sleep trong 120s'
+  timeout: 120
+```
+
+| Key | Value |
+| ------ | ------ |
+| webDriver: SleepAction | thực hiện ngủ trong 1 thời gian nhất |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| timeout: (s)| khai báo sẽ ngủ bao nhiêu giây |
