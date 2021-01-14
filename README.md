@@ -4,7 +4,7 @@
 
 Đây là script test được thiết kế viết theo định dạng file yaml.
 
-# Features!
+# Main!
 - Khai báo main chính:
 ```sh
 version: 0.0
@@ -32,3 +32,15 @@ Giải thích:
 | web | links Để tiến hành cho bài test |
 | resizeWindow | Size của số của browser |
 | actions | Các bước test của 1 bài test |
+
+Hình ảnh của POM test chứa nhiều bài test
+![enter image description here](https://github.com/mrnim94/testing/raw/master/document/image/trong%201%20POM.PNG)
+
+# Actions!
+Thư mục actions là nơi tập hợp của các bước test
+![enter image description here](https://github.com/mrnim94/testing/raw/master/document/image/trong%20actions.PNG)
+
+Chi tiết của 1 action
+![enter image description here](https://github.com/mrnim94/testing/raw/master/document/image/Chi%20ti%C3%AA%CC%81t%20trong%201%20action.PNG)
+
+# Features!
