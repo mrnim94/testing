@@ -120,3 +120,18 @@ SleepAction thực hiện sleep trong 1 khoảng thời gian nhất định 
 | webDriver: SleepAction | thực hiện ngủ trong 1 thời gian nhất |
 | description: | ghi lại miêu tả action cho bạn dễ hiểu |
 | timeout: (s)| khai báo sẽ ngủ bao nhiêu giây |
+
+## Implicit Wait Timeout.
+SetImplicitWaitTimeout chờ đến khi hiển thị đầy đủ các element cho bước tiếp theo thì action bước tiếp theo.
+
+```sh
+ - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+   description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
+   timeout: 60
+```
+
+| Key | Value |
+| ------ | ------ |
+| webDriver: SetImplicitWaitTimeout | thực hiện chờ trong 1 thời gian nhất |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| timeout: (s)| khai báo sẽ ngủ bao nhiêu giây |
