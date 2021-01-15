@@ -125,9 +125,9 @@ SleepAction thực hiện sleep trong 1 khoảng thời gian nhất định 
 SetImplicitWaitTimeout chờ đến khi hiển thị đầy đủ các element cho bước tiếp theo thì action bước tiếp theo.
 
 ```sh
- - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-   description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
-   timeout: 60
+- webDriver: SetImplicitWaitTimeout #set timeout bắt element
+  description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
+  timeout: 60
 ```
 
 | Key | Value |
@@ -135,3 +135,67 @@ SetImplicitWaitTimeout chờ đến khi hiển thị đầy đủ các elem
 | webDriver: SetImplicitWaitTimeout | thực hiện chờ trong 1 thời gian nhất |
 | description: | ghi lại miêu tả action cho bạn dễ hiểu |
 | timeout: (s)| khai báo sẽ ngủ bao nhiêu giây |
+
+## Switch Window.
+SwitchWindow: Khi action đang làm việc ở tab 0 sau đó bạn ấn vào button mở ra 1 tab mới. Lúc đó cần sử dụng SwitchWindow chuyển action lên tab mới đó
+
+```sh
+- webDriver: SwitchWindow
+  description: 'Chuyển tab'
+  tab: 1
+```
+
+| Key | Value |
+| ------ | ------ |
+| webDriver: SwitchWindow | thực hiện chuyển tab |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| tab: | thứ tự của tab muốn chuyển qua. Tab đầu tiên là 0 |
+
+## JavaScript.
+ExecuteScript sử dụng javascript để thực hiện action
+
+```sh
+- webDriver: ExecuteScript
+  description: 'Click Next bằng JavaScript'
+  script: document.querySelector('div[ng-click="setTab(3)"]').click()
+```
+
+| Key | Value |
+| ------ | ------ |
+| webDriver: ExecuteScript | thực hiện action bằng javascript |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| script: | khai báo code javascript ở đây |
+
+## Find Elements and action on these element.
+FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loại. Thực hiện kiểm tra các phần tử của list đó.
+
+```sh
+- webDriver: FindElements
+  description: 'Check list flavor và Click Tạo VM flavor random'
+  webElement:
+    by: ByCSSSelector
+    value: 'tr.ng-scope[ng-repeat="flavor in filteredFlavors"] > td[ng-bind="flavor.name"]'
+    ignored: True
+  checkElements:
+    countElements: 18
+    memberOfElements:
+      - value: v1.small2x8.b100
+      - value: v1.small1x1.b100
+      - value: v1.large24x64.b100
+    declareElement4Click: 'random'
+  actions:
+    - action: Click
+```
+| Key | Value |
+| ------ | ------ |
+| webDriver: FindElements | thực hiện tìm kiếm list element |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| webElement| Khai báo các thông tin cho việc tìm kiếm |
+| by| sẽ có 2 kiểu tìm là **ByCSSSelector** và **ByXPATH** |
+| value | điền giá trị để action tìm kiếm |
+| ignored| **True** thì nếu không tìm thấy sẽ dừng job và báo error, còn **False** là không tìm thấy sẽ bảo Warning và thực hiện bước tiếp theo |
+| checkElements| khai báo kiểm tra |
+| countElements:| Kiểm tra list có bao nhiều phần tử |
+| memberOfElements:| Kiểm tra nội dung của các element |
+| declareElement4Click: 'random'| chọn random 1 element cho click |
+| action: Click| Click vào element đó |
