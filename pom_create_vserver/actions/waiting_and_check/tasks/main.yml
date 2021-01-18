@@ -48,6 +48,9 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: SwitchWindow
       description: 'Chuyển tab'
       tab: 1
