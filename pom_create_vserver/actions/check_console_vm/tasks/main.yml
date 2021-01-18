@@ -1,0 +1,37 @@
+hooks:
+  checkConsoleVM:
+    - webDriver: FindElement
+      description: 'Click checkbox VM' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click vào Action' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//span[contains(text(),"Action")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Click Console VM trong Action' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: "a#console-btn"
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
+    - webDriver: SwitchWindow
+      description: 'Chuyển sang tab console'
+      tab: 1
+    - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp hình màn hình server'
+    - webDriver: SwitchWindow
+      description: 'Chuyển sang tab list VM'
+      tab: 0

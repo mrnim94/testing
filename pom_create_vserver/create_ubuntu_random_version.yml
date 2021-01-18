@@ -15,5 +15,6 @@ actions:
   - other_settings
   - summary_settings
   - waiting_and_check
+  - check_console_vm
   - screen_shot
   - end_testing
