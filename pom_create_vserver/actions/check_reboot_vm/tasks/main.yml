@@ -1,0 +1,46 @@
+hooks:
+  checkRebootVM:
+    - webDriver: FindElement
+      description: 'Click checkbox VM' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click vào Action' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//span[contains(text(),"Action")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Click reboot VM trong Action' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: "a#reboot-btn"
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click confirm reboot' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'a[ng-click="rebootServer()"]'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 120s'
+      timeout: 120
+    - webDriver: FindElement
+      description: 'Check Ubuntu-SE-Random tạo đã start hay chưa' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//following-sibling::div//following-sibling::div/div[1]'
+        ignored: True
+      actions:
+        - action: Text
+          check: ACTIVE
