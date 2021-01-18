@@ -48,3 +48,6 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 120s'
+      timeout: 120
