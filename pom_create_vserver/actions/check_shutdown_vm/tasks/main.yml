@@ -1,5 +1,5 @@
 hooks:
-  checkConsoleVM:
+  checkShutdownVM:
     - webDriver: FindElement
       description: 'Click checkbox VM' 
       webElement: 
@@ -16,6 +16,9 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 5s'
+      timeout: 5
     - webDriver: FindElement
       description: 'Click shutdown VM trong Action' 
       webElement: 
@@ -24,6 +27,9 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 5s'
+      timeout: 5
     - webDriver: FindElement
       description: 'Click confirm shutdown' 
       webElement: 
