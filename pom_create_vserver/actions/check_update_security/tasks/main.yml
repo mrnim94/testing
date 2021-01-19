@@ -30,7 +30,7 @@ hooks:
       description: 'Click close Action Update Security' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//span[contains(text(),"Action")]'
+        value: '//span[contains(text(),"Close")]'
         ignored: True
       actions:
         - action: Click
