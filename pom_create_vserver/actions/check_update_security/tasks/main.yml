@@ -26,7 +26,7 @@ hooks:
         - action: Click #đánh chữ vào ô input
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
-      timeout: 10
+      timeout: 30
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
     - webDriver: ExecuteScript
