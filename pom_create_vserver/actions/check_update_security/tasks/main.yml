@@ -26,16 +26,8 @@ hooks:
         - action: Click #đánh chữ vào ô input
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện Sleep trong 10s'
-      timeout: 10
-    - webDriver: FindElement
-      description: 'Click close Action Update Security' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"Update Security")]/following-sibling::div/following-sibling::div/a/following-sibling::a'
-        ignored: True
-      actions:
-        - action: Click
+    - webDriver: ExecuteScript
+      description: 'Click close Action Update Security'
+      script: document.querySelector('#update-sec-modal > div > div > div > div:nth-child(3) > a.btn.btn-close.btn-tw').click()
     - webDriver: Screenshot # chụp màng hình
       description: 'Chụp hình màn hình server'
