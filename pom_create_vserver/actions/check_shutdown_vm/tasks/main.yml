@@ -23,7 +23,7 @@ hooks:
       description: 'Click shutdown VM trong Action' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: "a#update-sec-btn"
+        value: "a#shutdown-btn"
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
