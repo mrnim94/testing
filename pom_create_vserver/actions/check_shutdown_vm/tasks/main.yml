@@ -1,13 +1,13 @@
 hooks:
   checkShutdownVM:
-    # - webDriver: FindElement
-    #   description: 'Click checkbox VM' 
-    #   webElement: 
-    #     by: ByXPATH #tìm kí tự mong muốn
-    #     value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
-    #     ignored: True
-    #   actions:
-    #     - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click checkbox VM' 
+      webElement: 
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
     - webDriver: FindElement
       description: 'Click vào Action' 
       webElement: 
