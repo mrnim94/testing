@@ -34,16 +34,9 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
-    - webDriver: FindElement
-      description: 'Click chọn SecGroup selenium' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//select[@id="update-sec-group-select"]/option[contains(text(),"selenium")]'
-        ignored: True
-      actions:
-        - action: Text
-          check: selenium
-        - action: Click
+    - webDriver: ExecuteScript
+      description: 'Click chọn SecGroup selenium'
+      script: document.querySelector('//select[@id="update-sec-group-select"]/option[contains(text(),"selenium")').click()
     - webDriver: FindElement
       description: 'Click chọn Update SecGroup' 
       webElement: 
