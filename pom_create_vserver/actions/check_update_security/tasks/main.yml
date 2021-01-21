@@ -41,6 +41,8 @@ hooks:
         value: '//option[contains(text(),"selenium")]'
         ignored: True
       actions:
+        - action: Text
+          check: selenium
         - action: Click
     - webDriver: FindElement
       description: 'Click chọn Update SecGroup' 
