@@ -38,7 +38,7 @@ hooks:
       description: 'Click chọn SecGroup selenium' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//select[@id='update-sec-group-select']/option[contains(text(),"selenium")]'
+        value: '//select[@id="update-sec-group-select"]/option[contains(text(),"selenium")]'
         ignored: True
       actions:
         - action: Text
