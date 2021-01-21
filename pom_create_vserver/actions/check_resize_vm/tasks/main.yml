@@ -40,10 +40,18 @@ hooks:
       actions:
         - action: Click
     - webDriver: FindElement
-      description: 'Click Xác nhận Resize VM' 
+      description: 'Click Resize VM' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
         value: "#save-resize-btn"
+        ignored: True
+      actions:
+        - action: Click #đánh chữ vào ô input
+    - webDriver: FindElement
+      description: 'Click Xac Nhan Resize VM' 
+      webElement: 
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '[ng-click="resizeServer()"]'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
