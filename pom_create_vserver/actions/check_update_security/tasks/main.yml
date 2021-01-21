@@ -37,8 +37,8 @@ hooks:
     - webDriver: FindElement
       description: 'Click chọn SecGroup selenium' 
       webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: '#update-sec-group-select > option[value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"]'
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//select[@id='update-sec-group-select']/option[contains(text(),"selenium")]'
         ignored: True
       actions:
         - action: Text
