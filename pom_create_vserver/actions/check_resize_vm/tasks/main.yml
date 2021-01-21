@@ -31,7 +31,7 @@ hooks:
         value: 'tr.ng-scope[ng-repeat="flavor in filteredFlavors"] > td[ng-bind="flavor.name"]'
         ignored: True
       checkElements:
-        countElements: 18
+        countElements: 17
         memberOfElements:
           - value: v1.small2x8.b100
           - value: v1.small1x1.b100
