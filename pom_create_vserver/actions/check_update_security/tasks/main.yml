@@ -43,6 +43,7 @@ hooks:
       actions:
         - action: Text
         - action: Click
+    - webDriver: FindElement
       description: 'Click chọn Update SecGroup' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
