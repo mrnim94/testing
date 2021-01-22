@@ -34,11 +34,14 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: FindElement
       description: 'Click chọn SecGroup selenium' 
       webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: '[contains(text(),"selenium")]'
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//option[contains(text(),"selenium")]'
         ignored: True
       actions:
         - action: Text
