@@ -30,17 +30,18 @@ hooks:
       description: 'Click Input để list SecGroup' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: ".token-search"
+        value: "#allowed-method"
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
     - webDriver: FindElement
       description: 'Click chọn SecGroup selenium' 
       webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//option[contains(text(),"selenium")]'
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'option[value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"]'
         ignored: True
       actions:
+        - action: Text
         - action: Click
       description: 'Click chọn Update SecGroup' 
       webElement: 
