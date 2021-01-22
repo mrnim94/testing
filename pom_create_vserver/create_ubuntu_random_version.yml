@@ -14,7 +14,7 @@ actions:
   - volume_settings
   - other_settings
   - summary_settings
-  # - waiting_and_check
+  - waiting_and_check
   - check_console_vm
   - check_update_security
   # - check_shutdown_vm
