@@ -38,7 +38,7 @@ hooks:
       description: 'Click chọn SecGroup selenium' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'option[value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"]'
+        value: '[contains(text(),"selenium")]'
         ignored: True
       actions:
         - action: Text
