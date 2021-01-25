@@ -54,6 +54,9 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: FindElement
       description: 'Click checkbox VM' 
       webElement: 
@@ -78,9 +81,6 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện Sleep trong 10s'
-      timeout: 10
     - webDriver: FindElement
       description: 'Check Đã thêm SecGroup selenium hay chưa' 
       webElement: 
