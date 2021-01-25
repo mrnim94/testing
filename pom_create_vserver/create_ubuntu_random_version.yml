@@ -17,9 +17,9 @@ actions:
   - waiting_and_check
   - check_console_vm
   - check_update_security
-  # - check_shutdown_vm
-  # - check_start_vm
-  # - check_reboot_vm
-  # - check_resize_vm
+  - check_shutdown_vm
+  - check_start_vm
+  - check_reboot_vm
+  - check_resize_vm
   - screen_shot
   - end_testing
