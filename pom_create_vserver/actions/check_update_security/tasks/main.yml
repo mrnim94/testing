@@ -81,11 +81,12 @@ hooks:
     - webDriver: FindElement
       description: 'Check Đã thêm SecGroup selenium hay chưa' 
       webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"selenium")]'
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: '.token[data-value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"] > div'
         ignored: True
       actions:
         - action: Text
+          check: selenium
     - webDriver: ExecuteScript
       description: 'Click close Action Update Security'
       script: document.querySelector('#update-sec-modal > div > div > div > div:nth-child(3) > a.btn.btn-close.btn-tw').click()
