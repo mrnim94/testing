@@ -20,6 +20,12 @@ Job test dùng để tạo VM bao gồm các action:
 | other_settings| Chọn network security, SecGroup và SSH key mặc định, Hiển thị giá. |
 | summary_settings| Kiểm tra thông tin sau cùng |
 | waiting_and_check| Chờ và Kiểm tra tạo đã active hay chưa |
+| check_console_vm| Check Console VM có hoạt động không |
+| check_update_security| Check Update Security và Security đã được tạo chưa |
+| check_shutdown_vm| Shutdown VM có thành công hay không |
+| check_start_vm| Start VM có thành công hay không |
+| check_reboot_vm| Reboot VM có thành công hay không |
+| check_resize_vm| Kiểm tra resize RAM và CPU cho của VM |
 | screen_shot| chụp ảnh |
 | end_testing | đánh dấu 1 job kết thúc |
 
