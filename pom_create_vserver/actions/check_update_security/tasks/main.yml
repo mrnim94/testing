@@ -78,11 +78,14 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: FindElement
       description: 'Check Đã thêm SecGroup selenium hay chưa' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: '.token[data-value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"] > div'
+        value: 'li.token[data-value="secg-5a274017-9deb-4b0c-81b0-181aaefd25f1"] > div'
         ignored: True
       actions:
         - action: Text
