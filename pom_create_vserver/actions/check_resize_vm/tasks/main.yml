@@ -39,6 +39,7 @@ hooks:
         declareElement4Click: 'random'
       actions:
         - action: Click
+        - action: Text
     - webDriver: FindElement
       description: 'Click Resize VM' 
       webElement: 
