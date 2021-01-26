@@ -80,12 +80,12 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Xác nhận việc delete image'
       script: document.querySelector('a[ng-click="acceptDeleteImage()"]').click()
-    - webDriver: AccessNewUrl # chụp màng hình
-      description: 'Mở BlockStore'
-      newUrl: 'https://portal3.vngcloud.vn/volumes/list.html'
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
       timeout: 10
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Mở BlockStore'
+      newUrl: 'https://portal3.vngcloud.vn/volumes/list.html'
     - webDriver: FindElement
       description: 'Click thùng rác' 
       webElement: 
