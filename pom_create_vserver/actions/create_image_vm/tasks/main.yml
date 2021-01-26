@@ -84,7 +84,7 @@ hooks:
       description: 'Click thùng rác' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'span.headerNumber.trashItemNumber'
+        value: 'div.trash-item'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
