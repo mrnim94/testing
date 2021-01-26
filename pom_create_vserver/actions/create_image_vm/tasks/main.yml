@@ -80,6 +80,9 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Xác nhận việc delete image'
       script: document.querySelector('a[ng-click="acceptDeleteImage()"]').click()
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Mở BlockStore'
+      newUrl: 'https://portal3.vngcloud.vn/volumes/list.html'
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
       timeout: 10
@@ -87,10 +90,10 @@ hooks:
       description: 'Click thùng rác' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'div.trash-item'
+        value: 'span.headerNumber.trashItemNumber'
         ignored: True
       actions:
-        - action: Click #đánh chữ vào ô input
+        - action: Click
     - webDriver: ExecuteScript
       description: 'Delete image trong thùng rác'
       script: document.querySelector('tr[resourcename="image-Ubuntu-SE-Random"]>td#doDelete>i.fa-trash').click()
