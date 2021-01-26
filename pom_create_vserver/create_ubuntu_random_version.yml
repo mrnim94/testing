@@ -21,5 +21,6 @@ actions:
   - check_start_vm
   - check_reboot_vm
   - check_resize_vm
+  - create_image_vm
   - screen_shot
   - end_testing
