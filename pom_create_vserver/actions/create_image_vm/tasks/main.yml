@@ -85,15 +85,10 @@ hooks:
       timeout: 10
     - webDriver: AccessNewUrl # chụp màng hình
       description: 'Mở BlockStore'
-      newUrl: 'https://portal3.vngcloud.vn/volumes/list.html'
-    - webDriver: FindElement
-      description: 'Click thùng rác' 
-      webElement: 
-        by: ByCSSSelector #tìm kí tự mong muốn
-        value: 'span.headerNumber.trashItemNumber'
-        ignored: True
-      actions:
-        - action: Click
+      newUrl: 'https://portal3.vngcloud.vn/images/list.html'
+    - webDriver: ExecuteScript
+      description: 'Click thùng rác'
+      script: document.querySelector('span.headerNumber.trashItemNumber').click()
     - webDriver: ExecuteScript
       description: 'Delete image trong thùng rác'
       script: document.querySelector('tr[resourcename="image-Ubuntu-SE-Random"]>td#doDelete>i.fa-trash').click()
