@@ -73,7 +73,7 @@ hooks:
       description: 'click delete image ở trong menu Action' 
       webElement: 
         by: ByCSSSelector #tìm kí tự mong muốn
-        value: a[onclick="location.href='/images/list.html'"]
+        value: '#delete-image-btn'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input'
