@@ -42,14 +42,9 @@ hooks:
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 120s'
       timeout: 120
-    - webDriver: FindElement
-      description: 'Tìm đến tab BlockStore' 
-      webElement: 
-        by: ByXPATH #tìm kí tự mong muốn
-        value: '//a[contains(text(),"BlockStore")]'
-        ignored: True
-      actions:
-        - action: Click
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Truy cập link web mới'
+      newUrl: 'https://portal3.vngcloud.vn/volumes/list.html'
     - webDriver: FindElement
       description: 'click image ở left-menu' 
       webElement: 
