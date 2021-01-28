@@ -86,6 +86,9 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Click thùng rác'
       script: document.querySelector('span.headerNumber.trashItemNumber').click()
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: FindElement
       description: 'Delete image trong thùng rác' 
       webElement: 
