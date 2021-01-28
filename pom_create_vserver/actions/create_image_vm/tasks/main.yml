@@ -4,7 +4,7 @@ hooks:
       description: 'Click checkbox VM' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        value: '//*[@id="user-image-list"]//div/text()[contains(.,'image-Ubuntu-SE-Random')]//parent::div//parent::div//preceding-sibling::div/label/span'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
@@ -80,12 +80,9 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Xác nhận việc delete image'
       script: document.querySelector('a[ng-click="acceptDeleteImage()"]').click()
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện Sleep trong 10s'
-      timeout: 10
-    - webDriver: AccessNewUrl # chụp màng hình
-      description: 'Mở BlockStore'
-      newUrl: 'https://portal3.vngcloud.vn/images/list.html'
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Chờ trước khi click thung rác timeout 30s'
+      timeout: 30
     - webDriver: ExecuteScript
       description: 'Click thùng rác'
       script: document.querySelector('span.headerNumber.trashItemNumber').click()
