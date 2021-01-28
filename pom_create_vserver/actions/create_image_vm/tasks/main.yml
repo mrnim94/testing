@@ -80,15 +80,12 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Xác nhận việc delete image'
       script: document.querySelector('a[ng-click="acceptDeleteImage()"]').click()
-    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
-      description: 'Chờ trước khi click thung rác timeout 30s'
-      timeout: 30
-    - webDriver: ExecuteScript
-      description: 'Click thùng rác'
-      script: document.querySelector('span.headerNumber.trashItemNumber').click()
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
       timeout: 10
+    - webDriver: ExecuteScript
+      description: 'Click thùng rác'
+      script: document.querySelector('span.headerNumber.trashItemNumber').click()
     - webDriver: FindElement
       description: 'Delete image trong thùng rác' 
       webElement: 
