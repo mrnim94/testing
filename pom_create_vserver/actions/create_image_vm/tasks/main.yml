@@ -4,7 +4,7 @@ hooks:
       description: 'Click checkbox VM' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="user-image-list"]//div/text()[contains(.,"image-Ubuntu-SE-Random")]//parent::div//parent::div//preceding-sibling::div/label/span'
+        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
@@ -57,7 +57,7 @@ hooks:
       description: 'Click checkbox image' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//*[@id="user-image-list"]//div[contains(text(),"image-Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        value: '//*[@id="user-image-list"]//div/text()[contains(.,"image-Ubuntu-SE-Random")]//parent::div//parent::div//preceding-sibling::div/label/span'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
