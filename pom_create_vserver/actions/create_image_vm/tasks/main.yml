@@ -97,9 +97,6 @@ hooks:
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input'
-    # - webDriver: ExecuteScript
-    #   description: 'Delete image trong thùng rác'
-    #   script: document.querySelector('tr[resourcename="image-Ubuntu-SE-Random"]>td#doDelete>i.fa-trash').click()
     - webDriver: FindElement
       description: 'Click Confirm Delete VM trong thùng rác' 
       webElement: 
