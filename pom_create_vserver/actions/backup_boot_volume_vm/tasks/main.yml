@@ -7,7 +7,7 @@ hooks:
       description: 'Click vào VM Ubuntu-SE-Random'
       webElement:
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//span[contains(text(),"Ubuntu-SE-Random")]'
+        value: '//div[contains(text(),"Ubuntu-SE-Random")]'
         ignored: True
       actions:
         - action: Click
@@ -15,7 +15,7 @@ hooks:
       description: 'Click vào Ubuntu-SE-Random boot_volume'
       webElement:
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//span[contains(text(),"Ubuntu-SE-Random boot_volume")]'
+        value: '//div[contains(text(),"Ubuntu-SE-Random boot_volume")]'
         ignored: True
       actions:
         - action: Click
