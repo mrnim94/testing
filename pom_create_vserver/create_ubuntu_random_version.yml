@@ -9,18 +9,19 @@ resizeWindow:
 actions:
   - start_testing
   - login_portal
-  - basic_configuration_create_vm
-  - instance_type_create_vm
-  - volume_settings
-  - other_settings
-  - summary_settings
-  - waiting_and_check
-  - check_console_vm
-  - check_update_security
-  - check_shutdown_vm
-  - check_start_vm
-  - check_reboot_vm
-  - check_resize_vm
-  - create_image_vm
+  - backup_boot_volume_vm
+  # - basic_configuration_create_vm
+  # - instance_type_create_vm
+  # - volume_settings
+  # - other_settings
+  # - summary_settings
+  # - waiting_and_check
+  # - check_console_vm
+  # - check_update_security
+  # - check_shutdown_vm
+  # - check_start_vm
+  # - check_reboot_vm
+  # - check_resize_vm
+  # - create_image_vm
   - screen_shot
   - end_testing

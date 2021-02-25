@@ -1,0 +1,71 @@
+hooks:
+  createVolumeBackupAndDeleteVolumeBackupVM:
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Truy cập create volume backups'
+      newUrl: 'https://portal3.vngcloud.vn/volume-backups/create.html'
+    - webDriver: FindElement
+      description: 'Click vào VM Ubuntu-SE-Random'
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//span[contains(text(),"Ubuntu-SE-Random")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Click vào Ubuntu-SE-Random boot_volume'
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//span[contains(text(),"Ubuntu-SE-Random boot_volume")]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: ExecuteScript
+      description: 'Click Next2 tạo backup cho VM'
+      script: document.querySelector('button[ng-click="setTab(2)"]').click()
+    - webDriver: ExecuteScript
+      description: 'Click tạo backup ngay cho VM'
+      script: document.querySelector('button[ng-click="isBackupLater=false;createBackup()"]').click()
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 8phut'
+      timeout: 480
+    - webDriver: ExecuteScript
+      description: 'Click refresh ngay'
+      script: document.querySelector('i[ng-click="refresh()"]').click()
+    - webDriver: ExecuteScript
+      description: 'Click refresh ngay'
+      script: document.querySelector('i[ng-click="refresh()"]').click()
+    - webDriver: FindElement
+      description: 'Check status file backup'
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"Ubuntu-SE-Random boot_volume")]/parent::td/following-sibling::td/i'
+        ignored: True
+      actions:
+        - action: Text
+          check: AVAILABLE
+    - webDriver: FindElement
+      description: 'click checkbox của Ubuntu-SE-Random boot_volume'
+      webElement:
+        by: ByXPATH #tìm kí tự mong muốn
+        value: '//div[contains(text(),"Ubuntu-SE-Random boot_volume")]/parent::td/preceding-sibling::td/label/span'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Click button delete Backup'
+      webElement:
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'button[data-target="#delete-backup-modal"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: FindElement
+      description: 'Click button Xác nhận delete Backup'
+      webElement:
+        by: ByCSSSelector #tìm kí tự mong muốn
+        value: 'a[ng-disabled="isDeletingVolumeBackups"]'
+        ignored: True
+      actions:
+        - action: Click
+    - webDriver: Screenshot # chụp màng hình
+      description: 'Chụp hình màn hình server'
