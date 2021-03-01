@@ -11,6 +11,9 @@ hooks:
         ignored: True
       actions:
         - action: Click
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện sleep 5s'
+      timeout: 5
     - webDriver: FindElement
       description: 'Click vào Ubuntu-SE-Random boot_volume'
       webElement:
