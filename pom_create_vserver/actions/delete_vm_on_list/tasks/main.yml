@@ -1,5 +1,8 @@
 hooks:
   waitingAndDelete:
+    - webDriver: AccessNewUrl # chụp màng hình
+      description: 'Truy cập list Server'
+      newUrl: 'https://portal3.vngcloud.vn/servers/list.html'
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
       timeout: 10

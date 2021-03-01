@@ -199,3 +199,18 @@ FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loạ
 | memberOfElements:| Kiểm tra nội dung của các element |
 | declareElement4Click: 'random'| chọn random 1 element cho click |
 | action: Click| Click vào element đó |
+
+
+## Find Elements and action on these element.
+FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loại. Thực hiện kiểm tra các phần tử của list đó.
+
+```sh
+- webDriver: AccessNewUrl # chụp màng hình
+  description: 'Truy cập create volume backups'
+  newUrl: 'https://portal3.vngcloud.vn/volume-backups/create.html'
+```
+| Key | Value |
+| ------ | ------ |
+| webDriver: AccessNewUrl | thực hiện truy cập vào 1 đường link mới |
+| description: | ghi lại miêu tả action cho bạn dễ hiểu |
+| newUrl| Khai báo đường link mà bạn muốn truy cập |

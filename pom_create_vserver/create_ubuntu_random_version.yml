@@ -23,5 +23,6 @@ actions:
   - check_resize_vm
   - create_image_vm
   - backup_boot_volume_vm
+  - delete_vm_on_list
   - screen_shot
   - end_testing
