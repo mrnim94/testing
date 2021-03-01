@@ -34,9 +34,9 @@ hooks:
     - webDriver: ExecuteScript
       description: 'Click refresh ngay'
       script: document.querySelector('i[ng-click="refresh()"]').click()
-    - webDriver: SleepAction #set timeout bắt element
-      description: 'Thực hiện sleep 5s'
-      timeout: 5
+    - webDriver: SetImplicitWaitTimeout #set timeout bắt element
+      description: 'Thực hiện Implicit Wait Timeout trong vòng 60s'
+      timeout: 60
     - webDriver: FindElement
       description: 'Check status file backup'
       webElement:
