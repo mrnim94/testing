@@ -201,7 +201,7 @@ FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loạ
 | action: Click| Click vào element đó |
 
 
-## Find Elements and action on these element.
+## Access New url on browser.
 FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loại. Thực hiện kiểm tra các phần tử của list đó.
 
 ```sh
