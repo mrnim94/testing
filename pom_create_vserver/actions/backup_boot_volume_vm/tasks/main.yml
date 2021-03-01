@@ -15,7 +15,7 @@ hooks:
       description: 'Click vào Ubuntu-SE-Random boot_volume'
       webElement:
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//div[contains(text(),"Ubuntu-SE-Random boot_volume")]'
+        value: '//div[contains(text(),"Ubuntu-SE-Random boot_volume")]/parent::div/preceding-sibling::div/label/span'
         ignored: True
       actions:
         - action: Click
