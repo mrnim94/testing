@@ -52,6 +52,7 @@ hooks:
           - range: 2
       actions:
         - action: Click
+        - action: Text
     - webDriver: ExecuteScript
       description: 'Chon Next để hoàn thành Tab Basic Configuration'
       script: document.querySelector('div[ng-click="setTab(2)"]').click()
