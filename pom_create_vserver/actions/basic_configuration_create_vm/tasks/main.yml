@@ -47,7 +47,9 @@ hooks:
           - value: 1-Ubuntu-16.04.5x64
           - value: 1-Ubuntu-14.04.5x64
           - value: 1-Ubuntu-18.04x64
-        declareElement4Click: 'random'
+        declareElement4Click:
+          - style: random
+          - range: 2
       actions:
         - action: Click
     - webDriver: ExecuteScript
