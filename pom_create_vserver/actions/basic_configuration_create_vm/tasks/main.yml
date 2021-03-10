@@ -53,6 +53,9 @@ hooks:
       actions:
         - action: Click
         - action: Text
+    - webDriver: SleepAction #set timeout bắt element
+      description: 'Thực hiện Sleep trong 10s'
+      timeout: 10
     - webDriver: ExecuteScript
       description: 'Chon Next để hoàn thành Tab Basic Configuration'
       script: document.querySelector('div[ng-click="setTab(2)"]').click()
