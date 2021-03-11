@@ -89,9 +89,9 @@ có 3 action cụ thể:
   actions:
     - action: Sendkeys #đánh chữ vào ô input
       value : 'Ubuntu-SE-Random'
-    - action: Click
-   	- action: Text
+    - action: Text
       check: ACTIVE
+    - action: Click
 ```
 
 | Key | Value |
@@ -182,8 +182,11 @@ FindElements: dùng để tìm ra 1 list gồm nhiều element cùng loạ
       - value: v1.small2x8.b100
       - value: v1.small1x1.b100
       - value: v1.large24x64.b100
-    declareElement4Click: 'random'
+    declareElement4Click:
+      - style: random
+      - range: 2
   actions:
+    - action: Text
     - action: Click
 ```
 | Key | Value |
