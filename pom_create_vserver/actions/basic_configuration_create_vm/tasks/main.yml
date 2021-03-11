@@ -52,7 +52,7 @@ hooks:
           - range: 2
       actions:
         - action: Text
-        - action: Text
+        - action: Click
     - webDriver: SleepAction #set timeout bắt element
       description: 'Thực hiện Sleep trong 10s'
       timeout: 10
