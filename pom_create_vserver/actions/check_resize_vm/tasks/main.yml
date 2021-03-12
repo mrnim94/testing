@@ -36,7 +36,9 @@ hooks:
           - value: v1.small2x8.b100
           - value: v1.small1x1.b100
           - value: v1.large24x64.b100
-        declareElement4Click: 'random'
+        declareElement4Click:
+          style: random
+          range: 4
       actions:
         - action: Click
         - action: Text
