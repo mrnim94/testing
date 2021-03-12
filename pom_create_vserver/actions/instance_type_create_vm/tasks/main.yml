@@ -32,8 +32,8 @@ hooks:
           - value: v1.large24x64.b100
         # declareElement4Click: 'random'
         declareElement4Click:
-          - style: 'random'
-          - range: '4'
+          style: random
+          range: 4
       actions:
         - action: Click
     - webDriver: ExecuteScript
