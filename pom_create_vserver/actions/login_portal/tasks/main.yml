@@ -7,7 +7,7 @@ hooks:
       webElement:
         by: ByCSSSelector
         value: '#username-nim'
-        ignored: True
+        ignored: False
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value: 'usernameInDB'
