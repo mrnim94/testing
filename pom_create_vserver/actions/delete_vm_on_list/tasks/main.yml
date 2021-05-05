@@ -22,7 +22,7 @@ hooks:
       description: 'Check VM có trong List không' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//p[contains(text(),"Ubuntu-SE-Random")]'
+        value: '//p[text()[contains(.,"Ubuntu-SE-Random")]]'
         ignored: True
       actions:
         - action: Text
