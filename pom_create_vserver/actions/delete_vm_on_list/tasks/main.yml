@@ -30,7 +30,7 @@ hooks:
       description: 'Click checkbox VM' 
       webElement: 
         by: ByXPATH #tìm kí tự mong muốn
-        value: '//p[contains(text(),"Ubuntu-SE-Random")]//parent::div//preceding-sibling::div//label/span'
+        value: '//p[text()[contains(.,"Ubuntu-SE-Random")]]//parent::div//preceding-sibling::div//label/span'
         ignored: True
       actions:
         - action: Click #đánh chữ vào ô input
