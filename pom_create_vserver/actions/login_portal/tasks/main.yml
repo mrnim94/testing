@@ -6,8 +6,8 @@ hooks:
       description: 'Tìm và Điền User'
       webElement:
         by: ByCSSSelector
-        value: '#username-nim'
-        ignored: False
+        value: '#username'
+        ignored: True
       actions:
         - action: Sendkeys #đánh chữ vào ô input
           value: 'usernameInDB'
