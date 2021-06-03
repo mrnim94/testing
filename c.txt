@@ -1,1 +1,3 @@
 Noi dung C
+
+cap nhat boi beta
